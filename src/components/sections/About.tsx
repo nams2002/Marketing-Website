@@ -27,7 +27,7 @@ export default function About() {
                 Our team of creative professionals combines strategic thinking with cutting-edge technology to deliver media solutions that not only look great but also drive measurable results for our clients.
               </p>
               <p>
-                From startups to Fortune 500 companies, we've helped businesses across various industries tell their stories, build their brands, and achieve their marketing objectives through compelling media content.
+                From startups to Fortune 500 companies, we&apos;ve helped businesses across various industries tell their stories, build their brands, and achieve their marketing objectives through compelling media content.
               </p>
             </div>
 

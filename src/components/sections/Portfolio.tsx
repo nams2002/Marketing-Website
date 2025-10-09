@@ -9,7 +9,7 @@ export default function Portfolio() {
             Our Portfolio
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore some of our recent projects and see how we've helped businesses achieve their goals through strategic media solutions.
+            Explore some of our recent projects and see how we&apos;ve helped businesses achieve their goals through strategic media solutions.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export default function Portfolio() {
             Want to See More of Our Work?
           </h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            These are just a few examples of how we've helped businesses achieve their goals. Contact us to discuss your project and see how we can help you succeed.
+            These are just a few examples of how we&apos;ve helped businesses achieve their goals. Contact us to discuss your project and see how we can help you succeed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200">

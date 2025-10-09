@@ -9,7 +9,7 @@ export default function Testimonials() {
             What Our Clients Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our clients have to say about working with {businessInfo.name}.
+            Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with {businessInfo.name}.
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export default function Testimonials() {
 
               {/* Testimonial Content */}
               <p className="text-gray-700 mb-6 italic">
-                "{testimonial.content}"
+                "                &ldquo;{testimonial.content}&rdquo;"
               </p>
 
               {/* Rating */}
