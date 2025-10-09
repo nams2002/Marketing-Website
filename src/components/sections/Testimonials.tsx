@@ -28,7 +28,7 @@ export default function Testimonials() {
 
               {/* Testimonial Content */}
               <p className="text-gray-700 mb-6 italic">
-                "                &ldquo;{testimonial.content}&rdquo;"
+                &ldquo;{testimonial.content}&rdquo;
               </p>
 
               {/* Rating */}
