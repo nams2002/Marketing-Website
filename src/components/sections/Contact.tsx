@@ -1,7 +1,10 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { businessInfo } from '@/data/business-info';
+import AnimatedSection from '@/components/ui/AnimatedSection';
+import { fadeInUp, fadeInLeft, fadeInRight } from '@/lib/animations';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -10,6 +13,8 @@ export default function Contact() {
     company: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -18,26 +23,40 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // You can integrate with your preferred form handling service
-    alert('Thank you for your message! We\'ll get back to you soon.');
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    setIsSubmitting(false);
+    setSubmitted(true);
+
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setSubmitted(false);
+      setFormData({ name: '', email: '', company: '', message: '' });
+    }, 3000);
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <AnimatedSection className="text-center mb-16">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+            variants={fadeInUp}
+          >
             Get In Touch
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            variants={fadeInUp}
+          >
             Ready to start your next project? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
-          </p>
-        </div>
+          </motion.p>
+        </AnimatedSection>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}

@@ -1,4 +1,10 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { businessInfo } from '@/data/business-info';
+import AnimatedSection from '@/components/ui/AnimatedSection';
+import AnimatedCounter from '@/components/ui/AnimatedCounter';
+import { staggerContainer, staggerItem, fadeInUp } from '@/lib/animations';
 
 export default function Influencers() {
   return (
@@ -84,24 +90,42 @@ export default function Influencers() {
             </h3>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">774K+</div>
-              <div className="text-gray-600 font-medium">Total Reach</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">6</div>
-              <div className="text-gray-600 font-medium">Active Influencers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">95%</div>
-              <div className="text-gray-600 font-medium">Engagement Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-orange-600 mb-2">50+</div>
-              <div className="text-gray-600 font-medium">Campaigns</div>
-            </div>
-          </div>
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <motion.div variants={staggerItem}>
+              <AnimatedCounter
+                value="774K+"
+                label="Total Reach"
+                className="text-blue-600"
+              />
+            </motion.div>
+            <motion.div variants={staggerItem}>
+              <AnimatedCounter
+                value="6"
+                label="Active Influencers"
+                className="text-purple-600"
+              />
+            </motion.div>
+            <motion.div variants={staggerItem}>
+              <AnimatedCounter
+                value="95%"
+                label="Engagement Rate"
+                className="text-green-600"
+              />
+            </motion.div>
+            <motion.div variants={staggerItem}>
+              <AnimatedCounter
+                value="50+"
+                label="Campaigns"
+                className="text-orange-600"
+              />
+            </motion.div>
+          </motion.div>
         </div>
 
         {/* CTA Section */}

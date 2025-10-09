@@ -1,4 +1,9 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { businessInfo } from '@/data/business-info';
+import AnimatedSection from '@/components/ui/AnimatedSection';
+import { staggerContainer, staggerItem, fadeInUp } from '@/lib/animations';
 
 export default function PastClients() {
   return (
@@ -13,12 +18,26 @@ export default function PastClients() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {businessInfo.pastClients.map((client) => (
-            <div
+            <motion.div
               key={client.id}
-              className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+              variants={staggerItem}
+              whileHover={{
+                y: -8,
+                scale: 1.02,
+                transition: { duration: 0.2 }
+              }}
+              className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200 overflow-hidden relative"
             >
+              {/* Gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               {/* Client Logo/Icon */}
               <div className="text-center mb-4">
                 <div className="text-4xl mb-2">{client.logo}</div>
