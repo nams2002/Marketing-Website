@@ -64,9 +64,9 @@ export default function PastClients() {
                   <span className="text-sm font-medium">Successfully Delivered</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
         <div className="text-center mt-16">
