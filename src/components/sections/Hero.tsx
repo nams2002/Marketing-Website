@@ -8,16 +8,16 @@ import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer, staggerItem } from
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">
       {/* Enhanced Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/80 via-indigo-50/80 to-purple-50/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-purple-900/20 to-blue-900/20" />
         <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e5e7eb' fill-opacity='0.4'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23374151' fill-opacity='0.4'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }} />
         {/* Floating Elements */}
         <motion.div
-          className="absolute top-20 left-10 w-20 h-20 bg-blue-200/30 rounded-full blur-xl"
+          className="absolute top-20 left-10 w-20 h-20 bg-indigo-500/20 rounded-full blur-xl"
           animate={{
             y: [0, -20, 0],
             x: [0, 10, 0],
@@ -29,7 +29,7 @@ export default function Hero() {
           }}
         />
         <motion.div
-          className="absolute top-40 right-20 w-32 h-32 bg-purple-200/30 rounded-full blur-xl"
+          className="absolute top-40 right-20 w-32 h-32 bg-purple-500/20 rounded-full blur-xl"
           animate={{
             y: [0, 20, 0],
             x: [0, -15, 0],
@@ -51,7 +51,7 @@ export default function Hero() {
         >
           {/* Main Heading */}
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
             variants={fadeInUp}
           >
             <motion.span
@@ -61,7 +61,7 @@ export default function Hero() {
               {businessInfo.name}
             </motion.span>
             <motion.span
-              className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent text-3xl md:text-4xl lg:text-5xl mt-2"
+              className="block bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent text-3xl md:text-4xl lg:text-5xl mt-2"
               variants={fadeInRight}
             >
               {businessInfo.tagline}
@@ -70,7 +70,7 @@ export default function Hero() {
 
           {/* Description */}
           <motion.p
-            className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
             variants={fadeInUp}
           >
             {businessInfo.description}
@@ -98,7 +98,7 @@ export default function Hero() {
             >
               <Link
                 href="#portfolio"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 backdrop-blur-sm bg-white/80"
+                className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-blue-400 hover:text-black transition-all duration-300 backdrop-blur-sm bg-gray-800/80"
               >
                 View Our Work
               </Link>
