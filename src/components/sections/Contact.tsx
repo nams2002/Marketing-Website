@@ -41,17 +41,17 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+            className="text-3xl md:text-4xl font-bold text-white mb-4"
             variants={fadeInUp}
           >
             Get In Touch
           </motion.h2>
           <motion.p
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-xl text-gray-300 max-w-3xl mx-auto"
             variants={fadeInUp}
           >
             Ready to start your next project? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
@@ -60,8 +60,8 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-gray-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+          <div className="bg-gray-800 border border-gray-700 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-6">
               Send us a message
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">

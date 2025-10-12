@@ -7,17 +7,17 @@ import { staggerContainer, staggerItem, fadeInUp } from '@/lib/animations';
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="services" className="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+            className="text-3xl md:text-4xl font-bold text-white mb-4"
             variants={fadeInUp}
           >
             Our Services
           </motion.h2>
           <motion.p
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-xl text-gray-300 max-w-3xl mx-auto"
             variants={fadeInUp}
           >
             We offer comprehensive media solutions tailored to meet your business needs and drive meaningful results.
@@ -40,10 +40,10 @@ export default function Services() {
                 scale: 1.02,
                 transition: { duration: 0.2 }
               }}
-              className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              className="group relative bg-gray-800 border border-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
               {/* Gradient Background on Hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               <div className="relative z-10">
                 {/* Icon */}
@@ -56,12 +56,12 @@ export default function Services() {
                 </motion.div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center group-hover:text-blue-600 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-4 text-center group-hover:text-blue-400 transition-colors duration-300">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   {service.description}
                 </p>
 
@@ -70,7 +70,7 @@ export default function Services() {
                   {service.features.map((feature, featureIndex) => (
                     <motion.li
                       key={featureIndex}
-                      className="flex items-center text-sm text-gray-700"
+                      className="flex items-center text-sm text-gray-300"
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: featureIndex * 0.1 }}

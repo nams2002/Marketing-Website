@@ -7,13 +7,13 @@ import { staggerContainer, staggerItem, fadeInUp } from '@/lib/animations';
 
 export default function PastClients() {
   return (
-    <section id="past-clients" className="py-20 bg-white">
+    <section id="past-clients" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Past Clients
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             We&apos;ve had the privilege of working with some amazing brands across various industries. Here are some of our successful partnerships.
           </p>
         </div>

@@ -227,7 +227,7 @@ export const businessInfo = {
       category: "Lifestyle & Entertainment",
       profileUrl: "https://www.instagram.com/abid_09_",
       description: "Popular lifestyle influencer with high engagement rates and authentic content creation.",
-      avatar: "👨‍💼"
+      avatar: "/images/influencers/abid.png"
     },
     {
       id: 2,
@@ -238,7 +238,7 @@ export const businessInfo = {
       category: "Fashion & Lifestyle",
       profileUrl: "https://www.instagram.com/nitishaa_09_",
       description: "Fashion and lifestyle content creator known for trendy posts and strong audience connection.",
-      avatar: "👩‍💼"
+      avatar: "/images/influencers/nitisha.png"
     },
     {
       id: 3,
@@ -249,7 +249,7 @@ export const businessInfo = {
       category: "Comedy & Entertainment",
       profileUrl: "https://www.instagram.com/tijara_vines01",
       description: "Comedy content creator specializing in viral vines and entertaining short-form content.",
-      avatar: "🎭"
+      avatar: "/images/influencers/tijaravines.png"
     },
     {
       id: 4,
@@ -260,7 +260,7 @@ export const businessInfo = {
       category: "Music & Entertainment",
       profileUrl: "https://www.instagram.com/sagar_pop02",
       description: "Music and entertainment influencer with a strong following in the youth demographic.",
-      avatar: "🎵"
+      avatar: "/images/influencers/sagarpop.png"
     },
     {
       id: 5,
@@ -271,7 +271,7 @@ export const businessInfo = {
       category: "Lifestyle & Fashion",
       profileUrl: "https://www.instagram.com/tanurawat33",
       description: "Lifestyle and fashion influencer creating authentic content with high engagement rates.",
-      avatar: "✨"
+      avatar: "/images/influencers/tanurawat.png"
     },
     {
       id: 6,
@@ -282,7 +282,7 @@ export const businessInfo = {
       category: "Fitness & Lifestyle",
       profileUrl: "https://www.instagram.com/amansharma_0000",
       description: "Fitness and lifestyle content creator inspiring audiences with motivational and health-focused content.",
-      avatar: "💪"
+      avatar: "/images/influencers/amansharma.png"
     }
   ],
 

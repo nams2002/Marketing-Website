@@ -8,13 +8,13 @@ import { staggerContainer, staggerItem, fadeInUp } from '@/lib/animations';
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-20 bg-white">
+    <section id="portfolio" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Portfolio
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Explore some of our recent projects and see how we&apos;ve helped businesses achieve their goals through strategic media solutions.
           </p>
         </div>
@@ -23,7 +23,7 @@ export default function Portfolio() {
           {businessInfo.portfolio.map((project) => (
             <div
               key={project.id}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              className="bg-gray-900 border border-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
             >
               {/* Project Image Placeholder */}
               <div className="h-64 bg-gradient-to-br from-blue-400 to-purple-500 relative overflow-hidden">
