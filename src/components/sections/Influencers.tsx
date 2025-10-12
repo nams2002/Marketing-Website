@@ -12,9 +12,11 @@ interface Influencer {
   name: string;
   handle: string;
   followers: string;
+  platform: string;
   category: string;
-  image: string;
-  verified: boolean;
+  profileUrl: string;
+  description: string;
+  avatar: string;
 }
 
 const InfluencerCard = ({ influencer, index }: { influencer: Influencer, index: number }) => {
