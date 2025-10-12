@@ -38,25 +38,25 @@ export default function Portfolio() {
               {/* Project Content */}
               <div className="p-6">
                 {/* Category Badge */}
-                <div className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                <div className="inline-block bg-blue-900/30 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">
                   {project.category}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-white mb-3">
                   {project.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-300 mb-4">
                   {project.description}
                 </p>
 
                 {/* Results */}
                 <div className="space-y-2 mb-4">
-                  <h4 className="text-sm font-semibold text-gray-900">Key Results:</h4>
+                  <h4 className="text-sm font-semibold text-white">Key Results:</h4>
                   {project.results.map((result, index) => (
-                    <div key={index} className="flex items-center text-sm text-gray-700">
+                    <div key={index} className="flex items-center text-sm text-gray-300">
                       <svg className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
@@ -66,7 +66,7 @@ export default function Portfolio() {
                 </div>
 
                 {/* View Project Button */}
-                <button className="w-full bg-gray-100 text-gray-800 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors duration-200 font-medium">
+                <button className="w-full bg-gray-700 text-gray-200 py-2 px-4 rounded-lg hover:bg-gray-600 transition-colors duration-200 font-medium">
                   View Case Study
                 </button>
               </div>
@@ -76,17 +76,17 @@ export default function Portfolio() {
 
         {/* Portfolio CTA */}
         <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <h3 className="text-2xl font-bold text-white mb-4">
             Want to See More of Our Work?
           </h3>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
             These are just a few examples of how we&apos;ve helped businesses achieve their goals. Contact us to discuss your project and see how we can help you succeed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200">
               View Full Portfolio
             </button>
-            <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors duration-200">
+            <button className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-gray-900 transition-colors duration-200">
               Start Your Project
             </button>
           </div>

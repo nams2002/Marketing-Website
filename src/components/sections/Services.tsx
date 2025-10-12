@@ -14,18 +14,32 @@ export default function Services() {
             className="text-3xl md:text-4xl font-bold text-white mb-4"
             variants={fadeInUp}
           >
-            Our Services
+            Our Influencer Marketing Services
           </motion.h2>
           <motion.p
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
+            className="text-xl text-gray-300 max-w-4xl mx-auto mb-8"
             variants={fadeInUp}
           >
-            We offer comprehensive media solutions tailored to meet your business needs and drive meaningful results.
+            At TS Media we specialize in forging powerful connections between brands and influencers, ensuring impactful and measurable results. We craft bespoke marketing strategies that drive specific outcomes, from boosting app installs to generating high-quality leads. We also nurture emerging influencers by providing hands-on social media management, optimizing engagement, and ensuring peak performance. Furthermore, we design strategic content blueprints that empower brands to achieve their growth and development goals.
           </motion.p>
+          <motion.div
+            className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 mb-8"
+            variants={fadeInUp}
+          >
+            <p className="text-lg text-white font-medium text-center mb-4">
+              At TS MEDIA, we turn creativity into measurable impact.
+            </p>
+            <p className="text-gray-300 text-center leading-relaxed">
+              From running high-performing logo campaigns for top brands like cricaza, stake, MostBet, and WinFix, where creators showcased branded stickers and delivered real, result-driven engagement — to executing viral song promotions across Bollywood and Haryanvi tracks, our team knows how to make content connect and convert.
+            </p>
+            <p className="text-blue-400 text-center font-semibold mt-4">
+              We don't just promote — we make brands trend.
+            </p>
+          </motion.div>
         </AnimatedSection>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"

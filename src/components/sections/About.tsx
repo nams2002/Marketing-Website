@@ -1,4 +1,5 @@
 import { businessInfo } from '@/data/business-info';
+import Image from 'next/image';
 
 export default function About() {
   return (
@@ -68,8 +69,22 @@ export default function About() {
             </div>
           </div>
 
-          {/* Visual Element */}
-          <div className="relative">
+          {/* Visual Element with Professional Photo */}
+          <div className="relative space-y-8">
+            {/* Professional Portrait */}
+            <div className="relative">
+              <div className="relative w-80 h-96 mx-auto rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/influencers/professional_potrait.jpg"
+                  alt="Professional Portrait"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              </div>
+            </div>
+
+            {/* Mission Card */}
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
               <div className="text-center">
                 <h4 className="text-2xl font-bold mb-4">Our Mission</h4>

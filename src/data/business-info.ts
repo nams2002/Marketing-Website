@@ -13,31 +13,45 @@ export const businessInfo = {
   services: [
     {
       id: 1,
-      title: "Content Creation",
-      description: "High-quality video, photo, and written content that tells your brand story effectively.",
-      icon: "📹",
-      features: ["Video Production", "Photography", "Copywriting", "Social Media Content"]
+      title: "Influencer Marketing",
+      description: "We specialize in forging powerful connections between brands and influencers, ensuring impactful and measurable results.",
+      icon: "🌟",
+      features: ["Brand-Influencer Partnerships", "Campaign Strategy", "Performance Analytics", "ROI Optimization"]
     },
     {
       id: 2,
-      title: "Digital Marketing",
-      description: "Strategic digital marketing campaigns that reach your target audience and drive conversions.",
-      icon: "📱",
-      features: ["Social Media Marketing", "SEO Optimization", "Email Campaigns", "PPC Advertising"]
+      title: "Bespoke Marketing Strategies",
+      description: "We craft bespoke marketing strategies that drive specific outcomes, from boosting app installs to generating high-quality leads.",
+      icon: "🎯",
+      features: ["App Install Campaigns", "Lead Generation", "Custom Strategy Development", "Performance Tracking"]
     },
     {
       id: 3,
-      title: "Brand Strategy",
-      description: "Comprehensive brand development and positioning to make your business stand out.",
-      icon: "🎯",
-      features: ["Brand Identity", "Logo Design", "Brand Guidelines", "Market Research"]
+      title: "Social Media Management",
+      description: "We nurture emerging influencers by providing hands-on social media management, optimizing engagement, and ensuring peak performance.",
+      icon: "📱",
+      features: ["Content Planning", "Engagement Optimization", "Growth Strategies", "Performance Monitoring"]
     },
     {
       id: 4,
-      title: "Media Production",
-      description: "Professional media production services for all your business communication needs.",
-      icon: "🎬",
-      features: ["Corporate Videos", "Promotional Content", "Event Coverage", "Live Streaming"]
+      title: "Strategic Content Blueprints",
+      description: "We design strategic content blueprints that empower brands to achieve their growth and development goals.",
+      icon: "📋",
+      features: ["Content Strategy", "Brand Development", "Growth Planning", "Creative Direction"]
+    },
+    {
+      id: 5,
+      title: "Logo Campaigns",
+      description: "High-performing logo campaigns for top brands where creators showcase branded stickers and deliver real, result-driven engagement.",
+      icon: "🏷️",
+      features: ["Branded Content Creation", "Creator Partnerships", "Engagement Tracking", "Brand Visibility"]
+    },
+    {
+      id: 6,
+      title: "Viral Song Promotions",
+      description: "Executing viral song promotions across Bollywood and Haryanvi tracks, making content connect and convert.",
+      icon: "🎵",
+      features: ["Music Promotion", "Viral Content Strategy", "Cross-Platform Distribution", "Trend Creation"]
     }
   ],
   

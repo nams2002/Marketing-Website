@@ -27,7 +27,7 @@ export default function Testimonials() {
               </div>
 
               {/* Testimonial Content */}
-              <p className="text-gray-700 mb-6 italic">
+              <p className="text-gray-300 mb-6 italic">
                 &ldquo;{testimonial.content}&rdquo;
               </p>
 
@@ -46,14 +46,14 @@ export default function Testimonials() {
               </div>
 
               {/* Client Info */}
-              <div className="border-t pt-4">
-                <div className="font-semibold text-gray-900">
+              <div className="border-t border-gray-600 pt-4">
+                <div className="font-semibold text-white">
                   {testimonial.name}
                 </div>
-                <div className="text-sm text-gray-600">
+                <div className="text-sm text-gray-400">
                   {testimonial.position}
                 </div>
-                <div className="text-sm text-blue-600 font-medium">
+                <div className="text-sm text-blue-400 font-medium">
                   {testimonial.company}
                 </div>
               </div>
@@ -61,27 +61,7 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Trust Indicators */}
-        <div className="mt-16 text-center">
-          <h3 className="text-xl font-semibold text-gray-900 mb-8">
-            Trusted by Industry Leaders
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
-            {/* Placeholder for client logos */}
-            <div className="bg-gray-200 h-16 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500 font-semibold">TechCorp</span>
-            </div>
-            <div className="bg-gray-200 h-16 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500 font-semibold">StartupXYZ</span>
-            </div>
-            <div className="bg-gray-200 h-16 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500 font-semibold">Fashion Forward</span>
-            </div>
-            <div className="bg-gray-200 h-16 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500 font-semibold">Global Inc</span>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );

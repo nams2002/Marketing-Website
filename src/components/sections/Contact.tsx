@@ -67,7 +67,7 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                     Name *
                   </label>
                   <input
@@ -82,7 +82,7 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                     Email *
                   </label>
                   <input
@@ -98,7 +98,7 @@ export default function Contact() {
                 </div>
               </div>
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                   Company
                 </label>
                 <input
@@ -112,7 +112,7 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                   Message *
                 </label>
                 <textarea
@@ -138,7 +138,7 @@ export default function Contact() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-2xl font-bold text-white mb-6">
                 Contact Information
               </h3>
               <div className="space-y-6">
@@ -149,8 +149,8 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900">Email</h4>
-                    <p className="text-gray-600">{businessInfo.contact.email}</p>
+                    <h4 className="text-lg font-semibold text-white">Email</h4>
+                    <p className="text-gray-300">{businessInfo.contact.email}</p>
                   </div>
                 </div>
 
@@ -161,8 +161,8 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900">Phone</h4>
-                    <p className="text-gray-600">{businessInfo.contact.phone}</p>
+                    <h4 className="text-lg font-semibold text-white">Phone</h4>
+                    <p className="text-gray-300">{businessInfo.contact.phone}</p>
                   </div>
                 </div>
 
@@ -174,17 +174,17 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900">Address</h4>
-                    <p className="text-gray-600">{businessInfo.contact.address}</p>
+                    <h4 className="text-lg font-semibold text-white">Address</h4>
+                    <p className="text-gray-300">{businessInfo.contact.address}</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Business Hours */}
-            <div className="bg-blue-50 rounded-2xl p-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">Business Hours</h4>
-              <div className="space-y-2 text-gray-600">
+            <div className="bg-gray-800 border border-gray-700 rounded-2xl p-6">
+              <h4 className="text-lg font-semibold text-white mb-4">Business Hours</h4>
+              <div className="space-y-2 text-gray-300">
                 <div className="flex justify-between">
                   <span>Monday - Friday</span>
                   <span>9:00 AM - 6:00 PM</span>
@@ -201,9 +201,9 @@ export default function Contact() {
             </div>
 
             {/* Response Time */}
-            <div className="bg-green-50 rounded-2xl p-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Quick Response</h4>
-              <p className="text-gray-600">
+            <div className="bg-gray-800 border border-gray-700 rounded-2xl p-6">
+              <h4 className="text-lg font-semibold text-white mb-2">Quick Response</h4>
+              <p className="text-gray-300">
                 We typically respond to all inquiries within 24 hours during business days.
               </p>
             </div>

@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { businessInfo } from '@/data/business-info';
 import { useState } from 'react';
+import AnimatedCounter from '@/components/ui/AnimatedCounter';
+import { staggerContainer, staggerItem } from '@/lib/animations';
 
 const InfluencerCard = ({ influencer, index }: { influencer: any, index: number }) => {
   const [imageError, setImageError] = useState(false);
@@ -83,13 +85,13 @@ const InfluencerCard = ({ influencer, index }: { influencer: any, index: number 
 
 export default function Influencers() {
   return (
-    <section id="influencers" className="py-20 bg-gray-50">
+    <section id="influencers" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Influencer Network
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             We work with a diverse network of talented influencers across various niches to help brands reach their target audiences authentically.
           </p>
         </div>
@@ -152,10 +154,10 @@ export default function Influencers() {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <h3 className="text-2xl font-bold text-white mb-4">
             Want to Work with Our Influencers?
           </h3>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
             Connect with our influencer network to amplify your brand message and reach your target audience through authentic partnerships.
           </p>
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200">
