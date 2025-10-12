@@ -27,26 +27,21 @@ A modern, responsive business website for TS Media built with Next.js 15, TypeSc
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd marketing-website
+git clone https://github.com/nams2002/Marketing-Website.git
+cd Marketing-Website
 ```
 
-2. Navigate to the project directory:
-```bash
-cd business-website
-```
-
-3. Install dependencies:
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-4. Run the development server:
+3. Run the development server:
 ```bash
 npm run dev
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 🎨 Design Features
 
