@@ -24,8 +24,6 @@ export default function AnimatedCounter({
 
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => {
-    // Extract number from value string (e.g., "500+" -> 500)
-    const numericValue = parseInt(value.replace(/[^\d]/g, ''));
     return Math.round(latest);
   });
 

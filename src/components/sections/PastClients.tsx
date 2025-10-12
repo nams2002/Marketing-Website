@@ -2,8 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { businessInfo } from '@/data/business-info';
-import AnimatedSection from '@/components/ui/AnimatedSection';
-import { staggerContainer, staggerItem, fadeInUp } from '@/lib/animations';
+import { staggerContainer, staggerItem } from '@/lib/animations';
 
 export default function PastClients() {
   return (

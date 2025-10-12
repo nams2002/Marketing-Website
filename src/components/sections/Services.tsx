@@ -33,7 +33,7 @@ export default function Services() {
               From running high-performing logo campaigns for top brands like cricaza, stake, MostBet, and WinFix, where creators showcased branded stickers and delivered real, result-driven engagement — to executing viral song promotions across Bollywood and Haryanvi tracks, our team knows how to make content connect and convert.
             </p>
             <p className="text-blue-400 text-center font-semibold mt-4">
-              We don't just promote — we make brands trend.
+              We don&apos;t just promote — we make brands trend.
             </p>
           </motion.div>
         </AnimatedSection>
@@ -45,7 +45,7 @@ export default function Services() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {businessInfo.services.map((service, index) => (
+          {businessInfo.services.map((service) => (
             <motion.div
               key={service.id}
               variants={staggerItem}

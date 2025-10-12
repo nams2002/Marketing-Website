@@ -7,7 +7,17 @@ import { useState } from 'react';
 import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import { staggerContainer, staggerItem } from '@/lib/animations';
 
-const InfluencerCard = ({ influencer, index }: { influencer: any, index: number }) => {
+interface Influencer {
+  id: number;
+  name: string;
+  handle: string;
+  followers: string;
+  category: string;
+  image: string;
+  verified: boolean;
+}
+
+const InfluencerCard = ({ influencer, index }: { influencer: Influencer, index: number }) => {
   const [imageError, setImageError] = useState(false);
 
   return (

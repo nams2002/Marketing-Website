@@ -1,10 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { useState } from 'react';
 import { businessInfo } from '@/data/business-info';
-import AnimatedSection from '@/components/ui/AnimatedSection';
-import { staggerContainer, staggerItem, fadeInUp } from '@/lib/animations';
 
 export default function Portfolio() {
   return (

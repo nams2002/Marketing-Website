@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { businessInfo } from '@/data/business-info';
 import AnimatedSection from '@/components/ui/AnimatedSection';
-import { fadeInUp, fadeInLeft, fadeInRight } from '@/lib/animations';
+import { fadeInUp } from '@/lib/animations';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -128,9 +128,10 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
+                disabled={isSubmitting}
+                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 disabled:opacity-50"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : submitted ? 'Message Sent!' : 'Send Message'}
               </button>
             </form>
           </div>
