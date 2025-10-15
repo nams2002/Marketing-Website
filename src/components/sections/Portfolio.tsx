@@ -3,13 +3,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { businessInfo } from '@/data/business-info';
 
 type Slide = { title: string; blurb: string; image?: string; href?: string };
 
 export default function Portfolio() {
   const slides: Slide[] = useMemo(() => [
-    { title: 'your\nbusiness\ncan be here', blurb: "Let's talk", image: '/bg/photo-1504384764586-bb4cdc1707b0.avif', href: '#contact' },
+    { title: 'your\nbusiness\ncan be here', blurb: "Let&apos;s talk", image: '/bg/photo-1504384764586-bb4cdc1707b0.avif', href: '#contact' },
     { title: 'Expanding\nInternational\nReach', blurb: 'We helped a small business expand internationally with +40% traffic in 6 months.', image: '/bg/photo-1523240795612-9a054b0db644.avif', href: '#contact' },
     { title: 'Social Media\nDomination', blurb: 'Creator-led strategy delivered +60% engagement.', image: '/bg/photo-1470790376778-a9fbc86d70e2.avif', href: '#contact' },
   ], []);
@@ -63,7 +62,7 @@ export default function Portfolio() {
                   </div>
                   <div className="text-gray-300 text-sm max-w-xs">
                     {idx === 0 ? (
-                      <button onClick={() => { window.location.hash = '#contact'; }} className="text-white font-semibold underline underline-offset-4">Let's talk</button>
+                      <button onClick={() => { window.location.hash = '#contact'; }} className="text-white font-semibold underline underline-offset-4">Let&apos;s talk</button>
                     ) : (
                       <p>{s.blurb}</p>
                     )}

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { businessInfo } from '@/data/business-info';
 import { useState, useRef, useEffect } from 'react';
@@ -168,7 +168,7 @@ export default function Influencers() {
           <div className="bg-white rounded-3xl shadow-xl p-8 lg:sticky lg:top-24">
             <h2 className="text-4xl font-extrabold text-gray-900 mb-6">The Creators Network</h2>
             <div className="h-0.5 w-16 bg-gray-300 mb-6" />
-            <p className="text-gray-600 mb-8">Keeping up to date with what's occurring within the creator economy is vital. Explore top creators and campaigns curated by our team.</p>
+            <p className="text-gray-600 mb-8">Keeping up to date with what&apos;s occurring within the creator economy is vital. Explore top creators and campaigns curated by our team.</p>
             <button className="px-6 py-3 rounded-xl bg-gray-900 text-white font-semibold hover:bg-gray-800 transition-colors duration-200">Join today</button>
           </div>
 

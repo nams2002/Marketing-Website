@@ -8,7 +8,7 @@ export default function Testimonials() {
     <section id="testimonials" className="relative py-24 overflow-hidden">
       {/* background image */}
       <div className="absolute inset-0">
-        <img src="/bg/photo-1550895030-823330fc2551.avif" alt="testimonials bg" className="w-full h-full object-cover" />
+        <Image src="/bg/photo-1550895030-823330fc2551.avif" alt="testimonials bg" fill className="object-cover" />
         <div className="absolute inset-0 bg-black/70" />
       </div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

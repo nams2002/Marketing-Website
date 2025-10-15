@@ -1,15 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { businessInfo } from '@/data/business-info';
-import { staggerContainer, staggerItem } from '@/lib/animations';
 
 export default function PastClients() {
   return (
     <section id="past-clients" className="relative py-24">
       {/* background image */}
       <div className="absolute inset-0">
-        <img src="/bg/photo-1493305457700-d3d24daf8c8c.avif" alt="catalog bg" className="w-full h-full object-cover" />
+        <Image src="/bg/photo-1493305457700-d3d24daf8c8c.avif" alt="catalog bg" fill className="object-cover" />
         <div className="absolute inset-0 bg-white/80" />
       </div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

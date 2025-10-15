@@ -26,10 +26,11 @@ export default function Services() {
     >
       {/* light interactive background */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/bg/photo-1470790376778-a9fbc86d70e2.avif"
           alt="Services background"
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-white/75" />
       </div>

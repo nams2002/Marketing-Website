@@ -3,8 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { businessInfo } from '@/data/business-info';
-import AnimatedCounter from '@/components/ui/AnimatedCounter';
-import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer, staggerItem } from '@/lib/animations';
+import { fadeInUp, fadeInLeft, staggerContainer } from '@/lib/animations';
 
 export default function Hero() {
   return (
@@ -45,7 +44,7 @@ export default function Hero() {
 
             <motion.div className="flex items-center gap-4 text-gray-700" variants={fadeInUp}>
               <div className="flex items-center gap-3">
-                <img src="/images/influencers/abid.png" alt="avatar" className="w-10 h-10 rounded-full object-cover" />
+                <Image src="/images/influencers/abid.png" alt="avatar" width={40} height={40} className="w-10 h-10 rounded-full object-cover" />
                 <div className="text-sm">
                   <div>Loved the performance</div>
                   <div className="text-gray-500">100% Satisfied</div>
