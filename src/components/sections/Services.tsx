@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Image from 'next/image';
 import { businessInfo } from '@/data/business-info';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import { staggerContainer, staggerItem, fadeInUp } from '@/lib/animations';

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { businessInfo } from '@/data/business-info';
 import { fadeInUp, fadeInLeft, staggerContainer } from '@/lib/animations';
@@ -10,10 +11,11 @@ export default function Hero() {
     <section id="home" className="relative overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img 
+        <Image 
           src="/bg/photo-1504384764586-bb4cdc1707b0.avif" 
           alt="Background" 
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-white/80" />
       </div>

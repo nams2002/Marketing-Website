@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 
 type Slide = { title: string; blurb: string; image?: string; href?: string };
@@ -47,7 +48,7 @@ export default function Portfolio() {
                 <div className={`relative rounded-2xl bg-white/5 border border-white/10 p-6 md:p-8 min-h-[360px] flex flex-col justify-between ${isCenter ? 'shadow-2xl' : 'shadow'} overflow-hidden`}>
                   {s.image && (
                     <div className="absolute inset-0 -z-10">
-                      <img src={s.image} alt="case" className="w-full h-full object-cover opacity-30" />
+                      <Image src={s.image || ''} alt="case" fill className="object-cover opacity-30" />
                     </div>
                   )}
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-transparent" />
