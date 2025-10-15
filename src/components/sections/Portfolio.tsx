@@ -1,90 +1,85 @@
 'use client';
 
+import { useEffect, useMemo, useState } from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { businessInfo } from '@/data/business-info';
 
-export default function Portfolio() {
-  return (
-    <section id="portfolio" className="py-20 bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Our Portfolio
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore some of our recent projects and see how we&apos;ve helped businesses achieve their goals through strategic media solutions.
-          </p>
-        </div>
+type Slide = { title: string; blurb: string; image?: string; href?: string };
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {businessInfo.portfolio.map((project) => (
-            <div
-              key={project.id}
-              className="bg-gray-900 border border-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-            >
-              {/* Project Image Placeholder */}
-              <div className="h-64 bg-gradient-to-br from-blue-400 to-purple-500 relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <div className="text-4xl mb-2">🎬</div>
-                    <div className="text-sm font-medium">{project.category}</div>
+export default function Portfolio() {
+  const slides: Slide[] = useMemo(() => [
+    { title: 'your\nbusiness\ncan be here', blurb: "Let's talk", image: '/bg/photo-1504384764586-bb4cdc1707b0.avif', href: '#contact' },
+    { title: 'Expanding\nInternational\nReach', blurb: 'We helped a small business expand internationally with +40% traffic in 6 months.', image: '/bg/photo-1523240795612-9a054b0db644.avif', href: '#contact' },
+    { title: 'Social Media\nDomination', blurb: 'Creator-led strategy delivered +60% engagement.', image: '/bg/photo-1470790376778-a9fbc86d70e2.avif', href: '#contact' },
+  ], []);
+
+  const [index, setIndex] = useState(1);
+  const [paused, setPaused] = useState(false);
+  const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length);
+  const next = () => setIndex((i) => (i + 1) % slides.length);
+  const order = [index - 1, index, index + 1].map((i) => (i + slides.length) % slides.length);
+
+  useEffect(() => {
+    if (paused) return;
+    const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), 4500);
+    return () => clearInterval(id);
+  }, [paused, slides.length]);
+
+  return (
+    <section id="portfolio" className="relative py-24 overflow-hidden">
+      <div className="absolute inset-0 bg-neutral-900" />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-[520px] h-[520px] rounded-full bg-red-700/30 blur-3xl" />
+      </div>
+
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-md shadow-xl p-8 md:p-12" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+          <div className="flex items-center justify-between mb-10">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white">Our Portfolio</h2>
+            <div className="hidden md:block text-right text-gray-300 text-xs max-w-[220px]">We thrive on <span className="text-white">creativity</span> and <span className="text-white">innovation</span>, delivering mindful solutions that make a <span className="text-red-400">real impact</span>.</div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+            {order.map((idx, pos) => {
+              const s = slides[idx];
+              const isCenter = pos === 1;
+              const CardInner = (
+                <div className={`relative rounded-2xl bg-white/5 border border-white/10 p-6 md:p-8 min-h-[360px] flex flex-col justify-between ${isCenter ? 'shadow-2xl' : 'shadow'} overflow-hidden`}>
+                  {s.image && (
+                    <div className="absolute inset-0 -z-10">
+                      <img src={s.image} alt="case" className="w-full h-full object-cover opacity-30" />
+                    </div>
+                  )}
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-transparent" />
+                  <div>
+                    {pos === 0 && (
+                      <button onClick={prev} className="mb-3 text-gray-400 hover:text-white text-xl font-bold">previous</button>
+                    )}
+                    {pos === 2 && (
+                      <button onClick={next} className="mb-3 text-gray-400 hover:text-white text-xl font-bold">next</button>
+                    )}
+                    <h3 className={`whitespace-pre-line ${isCenter ? 'text-3xl md:text-4xl' : 'text-2xl'} font-extrabold text-white`}>{s.title}</h3>
+                  </div>
+                  <div className="text-gray-300 text-sm max-w-xs">
+                    {idx === 0 ? (
+                      <button onClick={() => { window.location.hash = '#contact'; }} className="text-white font-semibold underline underline-offset-4">Let's talk</button>
+                    ) : (
+                      <p>{s.blurb}</p>
+                    )}
                   </div>
                 </div>
-              </div>
-
-              {/* Project Content */}
-              <div className="p-6">
-                {/* Category Badge */}
-                <div className="inline-block bg-blue-900/30 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">
-                  {project.category}
-                </div>
-
-                {/* Title */}
-                <h3 className="text-xl font-bold text-white mb-3">
-                  {project.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-gray-300 mb-4">
-                  {project.description}
-                </p>
-
-                {/* Results */}
-                <div className="space-y-2 mb-4">
-                  <h4 className="text-sm font-semibold text-white">Key Results:</h4>
-                  {project.results.map((result, index) => (
-                    <div key={index} className="flex items-center text-sm text-gray-300">
-                      <svg className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      {result}
-                    </div>
-                  ))}
-                </div>
-
-                {/* View Project Button */}
-                <button className="w-full bg-gray-700 text-gray-200 py-2 px-4 rounded-lg hover:bg-gray-600 transition-colors duration-200 font-medium">
-                  View Case Study
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Portfolio CTA */}
-        <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold text-white mb-4">
-            Want to See More of Our Work?
-          </h3>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            These are just a few examples of how we&apos;ve helped businesses achieve their goals. Contact us to discuss your project and see how we can help you succeed.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200">
-              View Full Portfolio
-            </button>
-            <button className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-gray-900 transition-colors duration-200">
-              Start Your Project
-            </button>
+              );
+              return (
+                <motion.div key={idx} animate={{ opacity: isCenter ? 1 : 0.55, y: isCenter ? 0 : 12, scale: isCenter ? 1 : 0.96 }} transition={{ duration: 0.3 }}>
+                  {isCenter && s.href ? (
+                    <Link href={s.href} className="block">{CardInner}</Link>
+                  ) : (
+                    CardInner
+                  )}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -4,54 +4,54 @@ export const businessInfo = {
   description: "We specialize in creating compelling media content that drives engagement and delivers results for businesses across all industries.",
   
   contact: {
-    email: "rahulsainjts@gmail.com",
-    phone: "+1 (555) 123-4567",
-    address: "123 Business Street, City, State 12345",
+    email: "Deepanshu@tsmedia.com",
+    phone: "+91 9518043484",
+    address: "Gurgaon, India",
     website: "www.tsmedia.com"
   },
   
   services: [
     {
       id: 1,
-      title: "Influencer Marketing",
-      description: "We specialize in forging powerful connections between brands and influencers, ensuring impactful and measurable results.",
+      title: "Next-Gen Influencer Strategy",
+      description: "We don't just connect with influencers — we match your brand with the perfect voices. Our team creates genuine partnerships that transform followers into loyal customers through data-driven creator collaborations.",
       icon: "🌟",
-      features: ["Brand-Influencer Partnerships", "Campaign Strategy", "Performance Analytics", "ROI Optimization"]
+      features: ["Perfect Brand-Influencer Matching", "Data-Driven Partnerships", "Follower-to-Customer Conversion", "Creator Collaboration Strategy"]
     },
     {
       id: 2,
-      title: "Bespoke Marketing Strategies",
-      description: "We craft bespoke marketing strategies that drive specific outcomes, from boosting app installs to generating high-quality leads.",
-      icon: "🎯",
-      features: ["App Install Campaigns", "Lead Generation", "Custom Strategy Development", "Performance Tracking"]
+      title: "Viral Meme Campaigns",
+      description: "We speak the internet's language. From clever meme ideas to trend-led content, we craft shareable moments that make your brand fun, relatable, and memorable.",
+      icon: "😂",
+      features: ["Clever Meme Ideas", "Trend-Led Content", "Shareable Moments", "Brand Relatability"]
     },
     {
       id: 3,
       title: "Social Media Management",
-      description: "We nurture emerging influencers by providing hands-on social media management, optimizing engagement, and ensuring peak performance.",
+      description: "From planning to storytelling — we cover it all. Our specialists design, manage, and optimize your digital presence to grow engagement, trust, and a thriving brand community.",
       icon: "📱",
-      features: ["Content Planning", "Engagement Optimization", "Growth Strategies", "Performance Monitoring"]
+      features: ["Content Planning", "Digital Presence Optimization", "Community Building", "Trust & Engagement Growth"]
     },
     {
       id: 4,
-      title: "Strategic Content Blueprints",
-      description: "We design strategic content blueprints that empower brands to achieve their growth and development goals.",
-      icon: "📋",
-      features: ["Content Strategy", "Brand Development", "Growth Planning", "Creative Direction"]
+      title: "Strategic Public Relations (PR)",
+      description: "We shape reputations that endure. Through targeted media outreach, compelling storytelling, and reputation management, we help brands earn attention organically.",
+      icon: "📢",
+      features: ["Targeted Media Outreach", "Compelling Storytelling", "Reputation Management", "Organic Attention"]
     },
     {
       id: 5,
-      title: "Logo Campaigns",
-      description: "High-performing logo campaigns for top brands where creators showcase branded stickers and deliver real, result-driven engagement.",
-      icon: "🏷️",
-      features: ["Branded Content Creation", "Creator Partnerships", "Engagement Tracking", "Brand Visibility"]
+      title: "Cinematic Content Production",
+      description: "From vision to screen — we bring ideas to life. Our production team delivers high-impact ad films, brand narratives, and visual experiences that engage and convert audiences.",
+      icon: "🎬",
+      features: ["High-Impact Ad Films", "Brand Narratives", "Visual Experiences", "Audience Engagement & Conversion"]
     },
     {
       id: 6,
-      title: "Viral Song Promotions",
-      description: "Executing viral song promotions across Bollywood and Haryanvi tracks, making content connect and convert.",
-      icon: "🎵",
-      features: ["Music Promotion", "Viral Content Strategy", "Cross-Platform Distribution", "Trend Creation"]
+      title: "Performance Marketing Analytics",
+      description: "Data-driven insights that matter. We analyze, optimize, and deliver measurable results through comprehensive performance tracking and ROI optimization strategies.",
+      icon: "📊",
+      features: ["Data-Driven Insights", "Performance Tracking", "ROI Optimization", "Measurable Results"]
     }
   ],
   

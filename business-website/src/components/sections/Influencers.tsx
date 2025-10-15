@@ -163,7 +163,7 @@ export default function Influencers() {
             viewport={{ once: true, amount: 0.3 }}
           >
             <motion.div variants={staggerItem} className="text-center">
-              <div className="text-4xl font-bold text-indigo-400 mb-2">774K+</div>
+              <div className="text-4xl font-bold text-indigo-400 mb-2">774K</div>
               <div className="text-sm font-medium text-gray-400 uppercase tracking-wide">Total Reach</div>
             </motion.div>
             <motion.div variants={staggerItem} className="text-center">

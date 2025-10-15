@@ -41,7 +41,16 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+    <section 
+      id="contact" 
+      className="py-20 relative bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: 'url(/bg/original-66b26d45b4ec57bddac738ed47b41a8d.webp)'
+      }}
+    >
+      {/* Background overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 to-gray-800/80"></div>
+      <div className="relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
           <motion.h2
@@ -210,6 +219,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

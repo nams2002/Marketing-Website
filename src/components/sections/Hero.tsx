@@ -8,150 +8,108 @@ import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer, staggerItem } from
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">
-      {/* Enhanced Background */}
+    <section id="home" className="relative overflow-hidden">
+      {/* Background image */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20" />
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23374151' fill-opacity='0.3'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
-        {/* Floating Elements */}
-        <motion.div
-          className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-blue-600/30 to-purple-600/30 rounded-full blur-2xl opacity-60"
-          animate={{
-            y: [0, -20, 0],
-            x: [0, 10, 0],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+        <img 
+          src="/bg/photo-1504384764586-bb4cdc1707b0.avif" 
+          alt="Background" 
+          className="w-full h-full object-cover"
         />
-        <motion.div
-          className="absolute top-40 right-20 w-32 h-32 bg-purple-400/20 rounded-full blur-xl"
-          animate={{
-            y: [0, 20, 0],
-            x: [0, -15, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
+        <div className="absolute inset-0 bg-white/80" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          className="max-w-4xl mx-auto"
-          initial="hidden"
-          animate="visible"
-          variants={staggerContainer}
-        >
-          {/* Main Heading */}
-          <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
-            variants={fadeInUp}
-          >
-            <motion.span
-              className="block"
-              variants={fadeInLeft}
-            >
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          {/* Left content */}
+          <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
+            <motion.div className="flex items-center gap-3 text-sm text-gray-700 mb-6" variants={fadeInUp}>
+              <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center">●</div>
+              <span>500+ Projects Delivered</span>
+              <span className="text-gray-400">/</span>
+              <Link href="#testimonials" className="underline underline-offset-4">Client Success Stories</Link>
+            </motion.div>
+
+            <motion.h1 className="text-6xl md:text-7xl font-serif tracking-tight text-gray-900 mb-6" variants={fadeInLeft}>
               {businessInfo.name}
-            </motion.span>
-            <motion.span
-              className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent text-3xl md:text-4xl lg:text-5xl mt-2"
-              variants={fadeInRight}
-            >
-              {businessInfo.tagline}
-            </motion.span>
-          </motion.h1>
+            </motion.h1>
 
-          {/* Description */}
-          <motion.p
-            className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
-            variants={fadeInUp}
-          >
-            {businessInfo.description}
-          </motion.p>
+            <motion.p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-xl mb-10" variants={fadeInUp}>
+              Drive Sales Growth, And Harness AI‑Powered User Content — Up To 50× Faster.
+            </motion.p>
 
-          {/* CTA Buttons */}
-          <motion.div
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12 w-full max-w-md sm:max-w-none mx-auto"
-            variants={fadeInUp}
-          >
-            <motion.div
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto"
-            >
-              <Link
-                href="#services"
-                className="block w-full sm:w-auto text-center bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Explore Our Services
-              </Link>
+            <motion.div className="flex flex-col sm:flex-row gap-4 mb-10" variants={fadeInUp}>
+              <Link href="#contact" className="px-6 py-3 rounded-xl bg-black text-white font-semibold shadow-sm hover:shadow-md transition-all text-center">Get Free Strategy Call</Link>
+              <Link href="#services" className="px-6 py-3 rounded-xl bg-white text-gray-900 border border-gray-300 font-semibold shadow-sm hover:shadow-md transition-all text-center">View Our Services ↗</Link>
             </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto"
-            >
-              <Link
-                href="#portfolio"
-                className="block w-full sm:w-auto text-center border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-blue-400 hover:text-gray-900 transition-all duration-300 backdrop-blur-sm bg-gray-800/80"
-              >
-                View Our Work
-              </Link>
+
+            <motion.div className="flex items-center gap-4 text-gray-700" variants={fadeInUp}>
+              <div className="flex items-center gap-3">
+                <img src="/images/influencers/abid.png" alt="avatar" className="w-10 h-10 rounded-full object-cover" />
+                <div className="text-sm">
+                  <div>Loved the performance</div>
+                  <div className="text-gray-500">100% Satisfied</div>
+                </div>
+              </div>
+              <div className="text-gray-300">/</div>
+              <div className="flex items-center gap-1"><span>★</span><span className="font-semibold">4.9</span></div>
             </motion.div>
           </motion.div>
 
-          {/* Stats */}
-          <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-            variants={staggerContainer}
-          >
-            {businessInfo.stats.map((stat, index) => (
-              <motion.div key={index} variants={staggerItem}>
-                <AnimatedCounter
-                  value={stat.value}
-                  label={stat.label}
-                  duration={2 + index * 0.2}
-                />
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
+          {/* Right visual */}
+          <div className="relative lg:h-[540px] md:h-[520px] h-[420px]">
+            {/* Accent rounded card */}
+            <motion.div className="absolute right-0 top-0 w-[85%] h-full rounded-[32px] bg-gradient-to-br from-orange-400 to-red-500" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} />
+
+            {/* Person image */}
+            <motion.img
+              src="/bg/photo-1760140551817-2695daec1b50.avif"
+              alt="TS Media team"
+              className="absolute right-8 bottom-0 w-[80%] h-[92%] object-cover rounded-[28px] shadow-2xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.6 }}
+            />
+
+            {/* Play button */}
+            <motion.button
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-white shadow-xl grid place-items-center"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" className="text-gray-900"><path d="M8 5v14l11-7z" /></svg>
+            </motion.button>
+
+            {/* Floating cards */}
+            <motion.div className="absolute -left-6 top-8 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl px-5 py-3 shadow-lg" initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.4 }}>
+              <div className="text-sm font-semibold text-gray-900">Ready to go viral?</div>
+            </motion.div>
+
+            <motion.div className="absolute left-0 top-28 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl px-5 py-3 shadow-lg" initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.55 }}>
+              <div className="text-sm font-semibold text-gray-900">Campaign performing well!</div>
+            </motion.div>
+
+            <motion.div className="absolute right-4 -top-6 w-56 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-3xl p-5 shadow-lg" initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.7 }}>
+              <div className="text-xs uppercase text-gray-400">Campaign reach</div>
+              <div className="text-4xl font-bold text-gray-900">2M+</div>
+              <div className="text-sm text-gray-600">Followers engaged</div>
+            </motion.div>
+
+            <motion.div className="absolute right-8 bottom-4 w-72 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-3xl p-4 shadow-lg flex gap-4 items-center" initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.85 }}>
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 grid place-items-center overflow-hidden">
+                <span className="text-2xl text-white">🚀</span>
+              </div>
+              <div className="flex-1">
+                <div className="text-gray-900 font-semibold">Latest Campaign</div>
+                <div className="text-gray-900 font-bold text-xl">500% ROI</div>
+                <div className="flex items-center gap-1 text-sm text-gray-700"><span>★</span><span>4.9</span></div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
       </div>
-
-      {/* Enhanced Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2, duration: 0.5 }}
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <Link
-            href="#about"
-            className="flex flex-col items-center text-gray-400 hover:text-blue-400 transition-colors duration-300"
-          >
-            <span className="text-sm font-medium mb-2">Scroll Down</span>
-            <motion.div
-              whileHover={{ scale: 1.2 }}
-              className="w-8 h-8 border-2 border-current rounded-full flex items-center justify-center"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-            </motion.div>
-          </Link>
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

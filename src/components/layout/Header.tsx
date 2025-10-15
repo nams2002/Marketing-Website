@@ -39,9 +39,9 @@ export default function Header() {
           <div className="hidden md:flex">
             <Link
               href="#contact"
-              className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-200 font-medium"
+              className="bg-gradient-to-r from-slate-700 to-slate-800 text-white px-6 py-2 rounded-lg hover:from-slate-800 hover:to-slate-900 transition-all duration-200 font-medium"
             >
-              Get Started
+              Book Free Strategy Call
             </Link>
           </div>
 
@@ -78,10 +78,10 @@ export default function Header() {
               ))}
               <Link
                 href="#contact"
-                className="block px-3 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-200 text-center mt-4"
+                className="block px-3 py-2 bg-gradient-to-r from-slate-700 to-slate-800 text-white rounded-lg hover:from-slate-800 hover:to-slate-900 transition-all duration-200 text-center mt-4"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Get Started
+                Book Free Strategy Call
               </Link>
             </div>
           </div>
