@@ -114,7 +114,7 @@ export default function About() {
 
           {/* Visual card with image and small overlay */}
           <div className="relative lg:h-[460px] h-[340px]">
-            <Image src="/bg/photo-1523240795612-9a054b0db644.avif" alt="Team working" fill className="object-cover rounded-3xl" />
+            <Image src="/bg/back1.jpg" alt="Team working" fill className="object-cover rounded-3xl" />
             <div className="absolute inset-0 rounded-3xl ring-1 ring-gray-200" />
             <div className="absolute -bottom-6 left-6 bg-white rounded-2xl shadow-lg p-4 w-64 border border-gray-100">
               <div className="text-xs text-gray-500">Client Growth</div>
@@ -136,13 +136,21 @@ export default function About() {
 
         {/* Clients carousel */}
         <div className="relative mt-20">
-          <div className="text-center text-gray-500 mb-6">Building Trust With Global Clients</div>
+          <div className="text-center text-gray-500 mb-6 font-bold">Building Trust With Global Clients</div>
           <div className="overflow-hidden py-2">
             <motion.div className="flex gap-12 items-center whitespace-nowrap" animate={{ x: ['0%', '-50%'] }} transition={{ duration: 22, repeat: Infinity, ease: 'linear' }}>
               {[...businessInfo.pastClients, ...businessInfo.pastClients].map((c, i) => (
-                <div key={i} className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
-                  <span className="text-xl">{c.logo}</span>
-                  <span className="text-sm font-medium">{c.name}</span>
+                <div key={i} className="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-colors">
+                  <div className="relative w-8 h-8 flex-shrink-0">
+                    <Image 
+                      src={c.logo} 
+                      alt={`${c.name} logo`}
+                      fill
+                      className="object-contain"
+                      sizes="32px"
+                    />
+                  </div>
+                  <span className="text-sm font-medium whitespace-nowrap">{c.name}</span>
                 </div>
               ))}
             </motion.div>

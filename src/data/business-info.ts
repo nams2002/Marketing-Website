@@ -16,6 +16,7 @@ export const businessInfo = {
       title: "Next-Gen Influencer Strategy",
       description: "We don't just connect with influencers — we match your brand with the perfect voices. Our team creates genuine partnerships that transform followers into loyal customers through data-driven creator collaborations.",
       icon: "🌟",
+      image: "/bg/photo-1470790376778-a9fbc86d70e2.avif",
       features: ["Perfect Brand-Influencer Matching", "Data-Driven Partnerships", "Follower-to-Customer Conversion", "Creator Collaboration Strategy"]
     },
     {
@@ -23,6 +24,7 @@ export const businessInfo = {
       title: "Viral Meme Campaigns",
       description: "We speak the internet's language. From clever meme ideas to trend-led content, we craft shareable moments that make your brand fun, relatable, and memorable.",
       icon: "😂",
+      image: "/bg/photo-1493305457700-d3d24daf8c8c.avif",
       features: ["Clever Meme Ideas", "Trend-Led Content", "Shareable Moments", "Brand Relatability"]
     },
     {
@@ -30,6 +32,7 @@ export const businessInfo = {
       title: "Social Media Management",
       description: "From planning to storytelling — we cover it all. Our specialists design, manage, and optimize your digital presence to grow engagement, trust, and a thriving brand community.",
       icon: "📱",
+      image: "/bg/photo-1504384764586-bb4cdc1707b0.avif",
       features: ["Content Planning", "Digital Presence Optimization", "Community Building", "Trust & Engagement Growth"]
     },
     {
@@ -37,6 +40,7 @@ export const businessInfo = {
       title: "Strategic Public Relations (PR)",
       description: "We shape reputations that endure. Through targeted media outreach, compelling storytelling, and reputation management, we help brands earn attention organically.",
       icon: "📢",
+      image: "/bg/photo-1523240795612-9a054b0db644.avif",
       features: ["Targeted Media Outreach", "Compelling Storytelling", "Reputation Management", "Organic Attention"]
     },
     {
@@ -44,6 +48,7 @@ export const businessInfo = {
       title: "Cinematic Content Production",
       description: "From vision to screen — we bring ideas to life. Our production team delivers high-impact ad films, brand narratives, and visual experiences that engage and convert audiences.",
       icon: "🎬",
+      image: "/bg/photo-1550895030-823330fc2551.avif",
       features: ["High-Impact Ad Films", "Brand Narratives", "Visual Experiences", "Audience Engagement & Conversion"]
     },
     {
@@ -51,6 +56,7 @@ export const businessInfo = {
       title: "Performance Marketing Analytics",
       description: "Data-driven insights that matter. We analyze, optimize, and deliver measurable results through comprehensive performance tracking and ROI optimization strategies.",
       icon: "📊",
+      image: "/bg/photo-1760140551817-2695daec1b50.avif",
       features: ["Data-Driven Insights", "Performance Tracking", "ROI Optimization", "Measurable Results"]
     }
   ],
@@ -123,7 +129,7 @@ export const businessInfo = {
       project: "Tata Yodha 2.0 Campaign",
       description: "Comprehensive digital marketing campaign for the launch of Tata Yodha 2.0, including video content and social media strategy.",
       industry: "Automotive",
-      logo: "🚛"
+      logo: "/bg/clients/tata.png"
     },
     {
       id: 2,
@@ -131,7 +137,7 @@ export const businessInfo = {
       project: "Brand Awareness Campaign",
       description: "Multi-platform content creation and influencer marketing to boost brand recognition and user engagement.",
       industry: "Gaming",
-      logo: "🎮"
+      logo: "/bg/clients/fairplay.png"
     },
     {
       id: 3,
@@ -139,7 +145,7 @@ export const businessInfo = {
       project: "Digital Marketing Strategy",
       description: "Strategic content creation and promotional campaigns to increase user acquisition and brand visibility.",
       industry: "Sports Betting",
-      logo: "🏆"
+      logo: "/bg/clients/mostbet.png"
     },
     {
       id: 4,
@@ -147,7 +153,7 @@ export const businessInfo = {
       project: "Sports Content Creation",
       description: "Cricket-focused content strategy with engaging videos and social media campaigns during major tournaments.",
       industry: "Sports",
-      logo: "🏏"
+      logo: "/bg/clients/cricaz.png"
     },
     {
       id: 5,
@@ -155,7 +161,7 @@ export const businessInfo = {
       project: "Social Media Management",
       description: "Complete social media management with daily content creation and community engagement strategies.",
       industry: "Gaming",
-      logo: "🎯"
+      logo: "/bg/clients/567r.png"
     },
     {
       id: 6,
@@ -163,7 +169,7 @@ export const businessInfo = {
       project: "Influencer Marketing Campaign",
       description: "Large-scale influencer partnerships and content creation to drive app downloads and user engagement.",
       industry: "Gaming",
-      logo: "🃏"
+      logo: "/bg/clients/rummy.jpeg"
     },
     {
       id: 7,
@@ -171,7 +177,7 @@ export const businessInfo = {
       project: "Performance Marketing",
       description: "Data-driven marketing campaigns with focus on conversion optimization and user retention.",
       industry: "Gaming",
-      logo: "🎲"
+      logo: "/bg/clients/1win.webp"
     },
     {
       id: 8,
@@ -179,7 +185,7 @@ export const businessInfo = {
       project: "Brand Development",
       description: "Complete brand identity development with logo design, brand guidelines, and marketing collateral.",
       industry: "Technology",
-      logo: "⚡"
+      logo: "/bg/clients/3rr.png"
     },
     {
       id: 9,
@@ -187,7 +193,7 @@ export const businessInfo = {
       project: "Website Promotion",
       description: "Digital marketing strategy to promote website traffic and improve online presence through content marketing.",
       industry: "Online Platform",
-      logo: "🌐"
+      logo: "/bg/clients/567r.png"
     },
     {
       id: 10,
@@ -195,7 +201,7 @@ export const businessInfo = {
       project: "Creative Content Campaign",
       description: "Innovative content creation with viral marketing strategies to increase brand awareness and engagement.",
       industry: "Entertainment",
-      logo: "🎭"
+      logo: "/bg/clients/elo.png"
     },
     {
       id: 11,
@@ -203,7 +209,7 @@ export const businessInfo = {
       project: "Multi-Channel Marketing",
       description: "Comprehensive marketing across multiple channels including social media, video content, and influencer partnerships.",
       industry: "Sports Betting",
-      logo: "🎰"
+      logo: "/bg/clients/rabet.png"
     },
     {
       id: 12,
@@ -211,7 +217,7 @@ export const businessInfo = {
       project: "App Promotion Campaign",
       description: "Strategic app promotion with engaging video content and social media campaigns to drive downloads.",
       industry: "Social Media",
-      logo: "📱"
+      logo: "/bg/clients/josh.png"
     },
     {
       id: 13,
@@ -219,7 +225,7 @@ export const businessInfo = {
       project: "Content Strategy",
       description: "Premium content creation and strategic marketing to enhance brand positioning in the competitive market.",
       industry: "Gaming",
-      logo: "💎"
+      logo: "/bg/clients/stake.png"
     },
     {
       id: 14,
@@ -227,7 +233,7 @@ export const businessInfo = {
       project: "Launch Campaign",
       description: "Complete app launch strategy with teaser campaigns, influencer marketing, and user acquisition tactics.",
       industry: "Mobile App",
-      logo: "🚀"
+      logo: "/bg/clients/moj.avif"
     }
   ],
 

@@ -1,82 +1,56 @@
 "use client";
 
-import { useMemo, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { useState } from 'react';
 import Image from 'next/image';
 import { businessInfo } from '@/data/business-info';
-import AnimatedSection from '@/components/ui/AnimatedSection';
-import { staggerContainer, staggerItem, fadeInUp } from '@/lib/animations';
-import AnimatedCounter from '@/components/ui/AnimatedCounter';
 
 export default function Services() {
   const [tab, setTab] = useState<'brands' | 'creators'>('brands');
   const [openCal, setOpenCal] = useState(false);
-  const [spot, setSpot] = useState<{x:number;y:number}>({ x: 0, y: 0 });
-  const { scrollY } = useScroll();
-  const gridOffset = useTransform(scrollY, [0, 600], [0, -40]);
-
-  const spotlightStyle = useMemo(() => ({
-    background: `radial-gradient(600px 600px at ${spot.x}px ${spot.y}px, rgba(255,255,255,0.25), transparent 60%)`
-  }), [spot]);
 
   return (
     <section
       id="services"
       className="relative py-24 overflow-hidden"
-      onMouseMove={(e) => setSpot({ x: e.clientX, y: e.clientY })}
     >
       {/* light interactive background */}
       <div className="absolute inset-0">
         <Image
-          src="/bg/photo-1470790376778-a9fbc86d70e2.avif"
+          src="/bg/back1.jpg"
           alt="Services background"
           fill
           className="object-cover"
         />
         <div className="absolute inset-0 bg-white/75" />
       </div>
-      <motion.div className="absolute inset-0 pointer-events-none" style={spotlightStyle} />
-      <motion.div className="absolute inset-0 pointer-events-none" style={{ y: gridOffset }}>
+      <div className="absolute inset-0 pointer-events-none">
         <div className="w-full h-full" style={{
           backgroundImage: "radial-gradient(circle at 1px 1px, rgba(0,0,0,0.06) 1px, transparent 0)",
           backgroundSize: "22px 22px"
         }} />
-      </motion.div>
+      </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection className="text-center mb-16">
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
-            variants={fadeInUp}
-          >
-            SERVICES offered By TS media
-          </motion.h2>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Services Offered By TS media
+          </h2>
           {/* Two-tab narrative */}
           <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-xl p-1 mb-6">
             <button onClick={()=>setTab('brands')} className={`px-4 py-2 rounded-lg text-sm font-medium ${tab==='brands'?'bg-gray-900 text-white':'text-gray-700'}`}>For Brands</button>
             <button onClick={()=>setTab('creators')} className={`px-4 py-2 rounded-lg text-sm font-medium ${tab==='creators'?'bg-gray-900 text-white':'text-gray-700'}`}>For Creators</button>
           </div>
-          <motion.p
-            key={tab}
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.25 }}
-            className="text-lg text-gray-600 max-w-4xl mx-auto mb-8"
-          >
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8">
             {tab==='brands'
               ? 'We craft bespoke strategies to hit your KPIs — installs, leads, or sales — and handle creator ops end‑to‑end with performance reporting.'
               : 'We help creators grow with content blueprints, brand partnerships, and tools that turn your audience into a business.'}
-          </motion.p>
+          </p>
           {/* Enhanced KPI strip */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12">
             {businessInfo.stats.map((s, i) => (
-              <motion.div 
+              <div 
                 key={i} 
                 className="group relative rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200 p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
-                whileHover={{ y: -5, scale: 1.02 }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
               >
                 {/* Gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -106,28 +80,23 @@ export default function Services() {
                   </div>
                   
                   <div className="text-3xl font-bold text-gray-900 mb-2">
-                    <AnimatedCounter value={s.value} label="" duration={1.2+i*0.1} />
+                    {s.value}
                   </div>
                   
                   <div className="text-gray-600 text-sm font-medium">{s.label}</div>
                   
                   {/* Professional progress indicator */}
                   <div className="mt-4 h-0.5 bg-gray-200 rounded-full overflow-hidden">
-                    <motion.div 
+                    <div 
                       className="h-full bg-gray-800"
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${75 + (i * 5)}%` }}
-                      transition={{ delay: 0.5 + (i * 0.1), duration: 1 }}
+                      style={{ width: `${75 + (i * 5)}%` }}
                     />
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-          <motion.div
-            className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-2xl p-8 mb-8 border border-gray-200"
-            variants={fadeInUp}
-          >
+          <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-2xl p-8 mb-8 border border-gray-200">
             <p className="text-lg text-gray-900 font-medium text-center mb-4">
               At TS MEDIA, we turn creativity into measurable impact.
             </p>
@@ -137,50 +106,33 @@ export default function Services() {
             <p className="text-blue-600 text-center font-semibold mt-4">
               We don&apos;t just promote — we make brands trend.
             </p>
-          </motion.div>
-        </AnimatedSection>
+          </div>
+        </div>
 
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {businessInfo.services.map((service, idx) => (
-            <motion.div
+            <div
               key={service.id}
-              variants={staggerItem}
-              whileHover={{
-                y: -6,
-                rotateX: 2,
-                rotateY: -2,
-                scale: 1.015,
-                transition: { duration: 0.2 }
-              }}
               className="group relative rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden backdrop-blur-sm bg-white/70 border border-gray-200 focus-within:ring-2 focus-within:ring-blue-400"
             >
-              {/* Animated gradient border for featured cards (2nd, 4th, 6th) */}
+              {/* Static gradient border for featured cards (2nd, 4th, 6th) */}
               {(idx === 1 || idx === 3 || idx === 5) && (
                 <div className="pointer-events-none absolute inset-0 rounded-2xl p-[1px]">
-                  <div className="absolute inset-0 rounded-2xl bg-[conic-gradient(from_0deg,theme(colors.blue.400),theme(colors.purple.400),theme(colors.blue.400))] opacity-30 animate-[spin_12s_linear_infinite]" />
+                  <div className="absolute inset-0 rounded-2xl bg-[conic-gradient(from_0deg,theme(colors.blue.400),theme(colors.purple.400),theme(colors.blue.400))] opacity-30" />
                 </div>
               )}
 
-              {/* Shine sweep */}
-              <div className="absolute -inset-1 opacity-0 group-hover:opacity-10 transition-opacity duration-300">
-                <div className="absolute -left-1 top-0 h-full w-1/3 bg-gradient-to-r from-transparent via-white to-transparent -skew-x-12 translate-x-[-120%] group-hover:translate-x-[220%] transition-transform duration-700" />
-              </div>
-
               <div className="relative z-10">
-                {/* Icon */}
-                <motion.div
-                  className="text-5xl mb-6 text-center"
-                  whileHover={{ scale: 1.08, rotate: 3 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {service.icon}
-                </motion.div>
+                {/* Service Image */}
+                <div className="w-20 h-20 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    width={80}
+                    height={80}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
 
                 {/* Title */}
                 <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">
@@ -202,22 +154,18 @@ export default function Services() {
                 </div>
 
                 {/* CTA Button */}
-                <div className="text-center">
-                  <motion.button
-                    className="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
-                    whileHover={{ scale: 1.05, x: 2, y: -1 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
+                {/* <div className="text-center">
+                  <button className="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg">
                     <span className="inline-flex items-center gap-2">Learn More <span>→</span></span>
-                  </motion.button>
+                  </button>
                   <div className="mt-2">
                     <a className="text-sm text-gray-600 hover:text-gray-900" href="#portfolio">See case study →</a>
                   </div>
-                </div>
+                </div> */}
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Polished CTA banner */}
         <div className="text-center mt-16">
@@ -243,16 +191,16 @@ export default function Services() {
             <div className="text-gray-500 text-sm mt-3">No sales pitch. 15 minutes. Free.</div>
 
             {/* small logo strip */}
-            <div className="mt-6 overflow-hidden">
-              <motion.div className="flex items-center justify-center gap-8 whitespace-nowrap" animate={{ x: ['0%', '-40%'] }} transition={{ duration: 18, repeat: Infinity, ease: 'linear' }}>
-                {[...businessInfo.pastClients.slice(0,8), ...businessInfo.pastClients.slice(0,8)].map((c, i) => (
+            {/* <div className="mt-6 overflow-hidden">
+              <div className="flex items-center justify-center gap-8 whitespace-nowrap">
+                {businessInfo.pastClients.slice(0,8).map((c, i) => (
                   <div key={i} className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
                     <span className="text-xl">{c.logo}</span>
                     <span className="text-sm">{c.name}</span>
                   </div>
                 ))}
-              </motion.div>
-            </div>
+              </div>
+            </div> */}
           </div>
         </div>
 

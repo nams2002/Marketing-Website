@@ -33,7 +33,7 @@ export default function Portfolio() {
         <div className="w-[520px] h-[520px] rounded-full bg-red-700/30 blur-3xl" />
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-md shadow-xl p-8 md:p-12" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
           <div className="flex items-center justify-between mb-10">
             <h2 className="text-4xl md:text-5xl font-extrabold text-white">Our Portfolio</h2>

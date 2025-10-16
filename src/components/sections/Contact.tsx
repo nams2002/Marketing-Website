@@ -49,7 +49,7 @@ export default function Contact() {
       }}
     >
       {/* Background overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 to-gray-800/80"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 to-gray-800/80"></div>
       <div className="relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
@@ -69,7 +69,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-gray-800 border border-gray-700 rounded-2xl p-8">
+          <div className="bg-gray-800/40 border border-gray-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-6">
               Send us a message
             </h3>

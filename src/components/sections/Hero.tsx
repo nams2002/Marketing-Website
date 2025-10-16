@@ -31,12 +31,12 @@ export default function Hero() {
               <Link href="#testimonials" className="underline underline-offset-4">Client Success Stories</Link>
             </motion.div>
 
-            <motion.h1 className="text-6xl md:text-7xl font-serif tracking-tight text-gray-900 mb-6" variants={fadeInLeft}>
+            <motion.h1 className="text-6xl md:text-7xl  tracking-tight text-gray-900 mb-6" variants={fadeInLeft}>
               {businessInfo.name}
             </motion.h1>
 
             <motion.p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-xl mb-10" variants={fadeInUp}>
-              Drive Sales Growth, And Harness AI‑Powered User Content — Up To 50× Faster.
+            TS Media builds brands that move markets—pairing perfect-fit creators, viral-ready memes, and always-on social management.
             </motion.p>
 
             <motion.div className="flex flex-col sm:flex-row gap-4 mb-10" variants={fadeInUp}>
@@ -46,14 +46,11 @@ export default function Hero() {
 
             <motion.div className="flex items-center gap-4 text-gray-700" variants={fadeInUp}>
               <div className="flex items-center gap-3">
-                <Image src="/images/influencers/abid.png" alt="avatar" width={40} height={40} className="w-10 h-10 rounded-full object-cover" />
                 <div className="text-sm">
-                  <div>Loved the performance</div>
-                  <div className="text-gray-500">100% Satisfied</div>
+                  <div>Powered by strategic PR and cinematic content</div>
+                  <div className="text-gray-500">we turn attention into trust—and trust into revenue.</div>
                 </div>
               </div>
-              <div className="text-gray-300">/</div>
-              <div className="flex items-center gap-1"><span>★</span><span className="font-semibold">4.9</span></div>
             </motion.div>
           </motion.div>
 
@@ -64,23 +61,13 @@ export default function Hero() {
 
             {/* Person image */}
             <motion.img
-              src="/bg/photo-1760140551817-2695daec1b50.avif"
+              src="/bg/back4.jpg"
               alt="TS Media team"
               className="absolute right-8 bottom-0 w-[80%] h-[92%] object-cover rounded-[28px] shadow-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.6 }}
             />
-
-            {/* Play button */}
-            <motion.button
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-white shadow-xl grid place-items-center"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.3 }}
-            >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" className="text-gray-900"><path d="M8 5v14l11-7z" /></svg>
-            </motion.button>
 
             {/* Floating cards */}
             <motion.div className="absolute -left-6 top-8 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl px-5 py-3 shadow-lg" initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.4 }}>
@@ -97,7 +84,7 @@ export default function Hero() {
               <div className="text-sm text-gray-600">Followers engaged</div>
             </motion.div>
 
-            <motion.div className="absolute right-8 bottom-4 w-72 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-3xl p-4 shadow-lg flex gap-4 items-center" initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.85 }}>
+            <motion.div className="absolute right-4 bottom-4 w-72 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-3xl p-4 shadow-lg flex gap-4 items-center" initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.85 }}>
               <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 grid place-items-center overflow-hidden">
                 <span className="text-2xl text-white">🚀</span>
               </div>

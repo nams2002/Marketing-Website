@@ -5,6 +5,13 @@ import Image from 'next/image';
 import { businessInfo } from '@/data/business-info';
 
 export default function PastClients() {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="past-clients" className="relative py-24">
       {/* background image */}
@@ -44,16 +51,23 @@ export default function PastClients() {
                         <h3 className="text-lg font-semibold text-gray-900">{client.name}</h3>
                         <div className="text-xs text-gray-500">{client.industry}</div>
                       </div>
-                      <div className="text-2xl">{client.logo}</div>
+                      <div className="w-12 h-12 relative">
+                        <Image 
+                          src={client.logo} 
+                          alt={`${client.name} logo`}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
                     </div>
                     <div className="space-y-2 text-sm">
                       <div className="font-medium text-gray-800">{client.project}</div>
                       <p className="text-gray-600 line-clamp-3">{client.description}</p>
                     </div>
-                    <div className="mt-4 flex items-center justify-between text-xs text-gray-500">
+                    {/* <div className="mt-4 flex items-center justify-between text-xs text-gray-500">
                       <span className="inline-flex items-center gap-1">★ 4.9</span>
                       <span className="underline underline-offset-4 text-blue-600">View details</span>
-                    </div>
+                    </div> */}
                   </div>
                 ))}
                 <div className="shrink-0 w-4" />
@@ -67,7 +81,12 @@ export default function PastClients() {
           <div className="rounded-2xl border border-gray-200 p-8 bg-white/70 backdrop-blur-md">
             <h3 className="text-2xl font-bold mb-4 text-gray-900">Want your brand in this catalogue?</h3>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">Let&apos;s discuss how we can help your brand achieve similar success with our proven marketing strategies and creative solutions.</p>
-            <button className="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-200">Start Your Project</button>
+            <button 
+              onClick={scrollToContact}
+              className="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-200"
+            >
+              Start Your Project
+            </button>
           </div>
         </div>
       </div>
