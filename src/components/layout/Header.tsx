@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { businessInfo, navigationItems } from '@/data/business-info';
 
 export default function Header() {
@@ -17,8 +18,17 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="#home" className="text-2xl font-bold text-white">
-              {businessInfo.name}
+            <Link href="#home" className="flex items-center space-x-3">
+              <Image
+                src="/bg/logo/Pink and Black Elegant Personal Name Initials Logo.png"
+                alt="TS Media Logo"
+                width={40}
+                height={40}
+                className="w-10 h-10 object-contain"
+              />
+              <span className="text-2xl font-bold text-white">
+                {businessInfo.name}
+              </span>
             </Link>
           </div>
 

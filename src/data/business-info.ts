@@ -4,9 +4,9 @@ export const businessInfo = {
   description: "We specialize in creating compelling media content that drives engagement and delivers results for businesses across all industries.",
   
   contact: {
-    email: "Deepanshu@tsmedia.com",
+    email: "thetsmedia84@gmail.com",
     phone: "+91 9518043484",
-    address: "Gurgaon, India",
+    address: "Sec-112, Palam Vihar, 506, Gurugram, India",
     website: "www.tsmedia.com"
   },
   
@@ -308,9 +308,9 @@ export const businessInfo = {
 
   socialMedia: {
     facebook: "https://facebook.com/tsmedia",
-    instagram: "https://instagram.com/tsmedia",
-    twitter: "https://twitter.com/tsmedia",
-    linkedin: "https://linkedin.com/company/tsmedia",
+    instagram: "https://instagram.com/the.tsmedia",
+    twitter: "https://twitter.com/thetsmedia",
+    linkedin: "https://linkedin.com/company/the-ts-media",
     youtube: "https://youtube.com/tsmedia"
   }
 };
@@ -319,7 +319,7 @@ export const navigationItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Services", href: "#services" },
-  { name: "Portfolio", href: "#portfolio" },
+  { name: "Our Team", href: "#our-team" },
   { name: "Clients", href: "#past-clients" },
   { name: "Influencers", href: "#influencers" },
   { name: "Testimonials", href: "#testimonials" },
