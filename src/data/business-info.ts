@@ -247,7 +247,7 @@ export const businessInfo = {
       category: "Fitness & Lifestyle",
       profileUrl: "https://www.instagram.com/amansharma_0000",
       description: "Fitness and lifestyle content creator inspiring audiences with motivational and health-focused content.",
-      avatar: "/images/influencers/AmanSharma.png"
+      avatar: "/images/influencers/amansharma.png"
     },
     {
       id: 2,
@@ -269,7 +269,7 @@ export const businessInfo = {
       category: "Lifestyle & Fashion",
       profileUrl: "https://www.instagram.com/saniya_sheikh",
       description: "Lifestyle and fashion influencer creating authentic content with high engagement rates.",
-      avatar: "/images/influencers/saniyaseikh.png"
+      avatar: "/images/influencers/saniyasheikh.png"
     },
     {
       id: 4,
