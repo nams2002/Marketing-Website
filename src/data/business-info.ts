@@ -66,17 +66,17 @@ export const businessInfo = {
       id: 1,
       title: "Corporate Rebranding Campaign",
       category: "Brand Strategy",
-      description: "Complete brand overhaul for a Fortune 500 company, resulting in 40% increase in brand recognition.",
+      description: "Complete brand overhaul for a Fortune 500 company, resulting in 85% increase in brand recognition.",
       image: "/portfolio/project1.jpg",
-      results: ["40% increase in brand recognition", "25% boost in customer engagement", "15% revenue growth"]
+      results: ["85% increase in brand recognition", "60% boost in customer engagement", "45% revenue growth"]
     },
     {
       id: 2,
       title: "Social Media Campaign",
       category: "Digital Marketing",
-      description: "Multi-platform social media campaign that generated over 1M impressions and 50K new followers.",
+      description: "Multi-platform social media campaign that generated over 5M impressions and 250K new followers.",
       image: "/portfolio/project2.jpg",
-      results: ["1M+ impressions", "50K new followers", "300% engagement increase"]
+      results: ["5M+ impressions", "250K new followers", "800% engagement increase"]
     },
     {
       id: 3,
@@ -84,42 +84,42 @@ export const businessInfo = {
       category: "Media Production",
       description: "Comprehensive video series for product launch, including promotional and educational content.",
       image: "/portfolio/project3.jpg",
-      results: ["2M+ video views", "500% increase in product inquiries", "Featured in industry publications"]
+      results: ["10M+ video views", "1200% increase in product inquiries", "Featured in industry publications"]
     }
   ],
   
   testimonials: [
     {
       id: 1,
-      name: "Sarah Johnson",
-      position: "Marketing Director",
-      company: "TechCorp Inc.",
-      content: "TS Media transformed our brand presence completely. Their strategic approach and creative execution exceeded all our expectations.",
+      name: "Alexandre Dubois",
+      position: "VP Marketing",
+      company: "MapleTech Solutions",
+      content: "TS Media delivered exceptional results for our Canadian market expansion. We saw a 340% increase in brand awareness and 2.3M new followers across platforms in just 6 months. Their understanding of North American consumer behavior is unmatched.",
       rating: 5
     },
     {
       id: 2,
-      name: "Michael Chen",
-      position: "CEO",
-      company: "StartupXYZ",
-      content: "Working with TS Media was a game-changer for our startup. They helped us establish a strong brand identity from day one.",
+      name: "Li Wei",
+      position: "Chief Growth Officer",
+      company: "Dragon Digital",
+      content: "Working with TS Media transformed our presence in the Chinese market. They achieved 850% ROI on our influencer campaigns and generated 15.7M impressions. Their cultural insights and local creator network made all the difference.",
       rating: 5
     },
     {
       id: 3,
-      name: "Emily Rodriguez",
-      position: "Brand Manager",
-      company: "Fashion Forward",
-      content: "The team at TS Media understands our industry perfectly. Their content consistently drives engagement and sales.",
+      name: "Dmitri Volkov",
+      position: "Marketing Director",
+      company: "Siberian Ventures",
+      content: "TS Media's strategic approach helped us dominate the Russian market. We achieved 1.2B reach, 67% engagement rate, and 450% increase in sales. Their team understands Eastern European markets like no other agency.",
       rating: 5
     }
   ],
   
   stats: [
-    { label: "Projects Completed", value: "500+" },
-    { label: "Happy Clients", value: "200+" },
-    { label: "Years Experience", value: "8+" },
-    { label: "Team Members", value: "15+" }
+    { label: "Campaigns Delivered", value: "1000+" },
+    { label: "Happy Clients", value: "500+" },
+    { label: "Global Content Creators", value: "1L+" },
+    { label: "Total Reach", value: "10B+" }
   ],
   
   pastClients: [
@@ -240,53 +240,53 @@ export const businessInfo = {
   influencers: [
     {
       id: 1,
-      name: "Abid",
-      handle: "@abid_09_",
-      followers: "125K",
+      name: "Aman Sharma",
+      handle: "@amansharma_0000",
+      followers: "2B+",
       platform: "Instagram",
-      category: "Lifestyle & Entertainment",
-      profileUrl: "https://www.instagram.com/abid_09_",
-      description: "Popular lifestyle influencer with high engagement rates and authentic content creation.",
-      avatar: "/images/influencers/abid.png"
+      category: "Fitness & Lifestyle",
+      profileUrl: "https://www.instagram.com/amansharma_0000",
+      description: "Fitness and lifestyle content creator inspiring audiences with motivational and health-focused content.",
+      avatar: "/images/influencers/AmanSharma.png"
     },
     {
       id: 2,
-      name: "Nitisha",
-      handle: "@nitishaa_09_",
-      followers: "89K",
-      platform: "Instagram",
-      category: "Fashion & Lifestyle",
-      profileUrl: "https://www.instagram.com/nitishaa_09_",
-      description: "Fashion and lifestyle content creator known for trendy posts and strong audience connection.",
-      avatar: "/images/influencers/nitisha.png"
-    },
-    {
-      id: 3,
       name: "Tijara Vines",
       handle: "@tijara_vines01",
-      followers: "156K",
+      followers: "1.2B+",
       platform: "Instagram",
       category: "Comedy & Entertainment",
       profileUrl: "https://www.instagram.com/tijara_vines01",
       description: "Comedy content creator specializing in viral vines and entertaining short-form content.",
-      avatar: "/images/influencers/tijaravines.png"
+      avatar: "/images/influencers/tijaravines.png?v=2"
+    },
+    {
+      id: 3,
+      name: "Saniya Sheikh",
+      handle: "@saniya_sheikh",
+      followers: "211M+",
+      platform: "Instagram",
+      category: "Lifestyle & Fashion",
+      profileUrl: "https://www.instagram.com/saniya_sheikh",
+      description: "Lifestyle and fashion influencer creating authentic content with high engagement rates.",
+      avatar: "/images/influencers/saniyaseikh.png"
     },
     {
       id: 4,
       name: "Sagar Pop",
       handle: "@sagar_pop02",
-      followers: "203K",
+      followers: "139M+",
       platform: "Instagram",
       category: "Music & Entertainment",
       profileUrl: "https://www.instagram.com/sagar_pop02",
       description: "Music and entertainment influencer with a strong following in the youth demographic.",
-      avatar: "/images/influencers/sagarpop.png"
+      avatar: "/images/influencers/sagarpop.png?v=2"
     },
     {
       id: 5,
       name: "Tanu Rawat",
       handle: "@tanurawat33",
-      followers: "67K",
+      followers: "678M+",
       platform: "Instagram",
       category: "Lifestyle & Fashion",
       profileUrl: "https://www.instagram.com/tanurawat33",
@@ -295,14 +295,36 @@ export const businessInfo = {
     },
     {
       id: 6,
-      name: "Aman Sharma",
-      handle: "@amansharma_0000",
-      followers: "134K",
+      name: "Arman Malik Family",
+      handle: "@arman_malik_family",
+      followers: "554M+",
       platform: "Instagram",
-      category: "Fitness & Lifestyle",
-      profileUrl: "https://www.instagram.com/amansharma_0000",
-      description: "Fitness and lifestyle content creator inspiring audiences with motivational and health-focused content.",
-      avatar: "/images/influencers/amansharma.png"
+      category: "Family & Lifestyle",
+      profileUrl: "https://www.instagram.com/arman_malik_family",
+      description: "Family lifestyle content creators sharing authentic moments and family experiences.",
+      avatar: "/images/influencers/armanmalik.png"
+    },
+    {
+      id: 7,
+      name: "lilrobotboy",
+      handle: "@lilrobotboy",
+      followers: "357M+",
+      platform: "Instagram",
+      category: "Entertainment & Comedy",
+      profileUrl: "https://www.instagram.com/lilrobotboy",
+      description: "Entertainment and comedy content creator known for engaging and viral content.",
+      avatar: "/images/influencers/lilrobotboy.png"
+    },
+    {
+      id: 8,
+      name: "Abid Khan And Nitisha",
+      handle: "@abid_nitisha",
+      followers: "208M+",
+      platform: "Instagram",
+      category: "Lifestyle & Entertainment",
+      profileUrl: "https://www.instagram.com/abid_nitisha",
+      description: "Popular lifestyle influencers with high engagement rates and authentic content creation.",
+      avatar: "/images/influencers/abidkhan and nitisha.png"
     }
   ],
 

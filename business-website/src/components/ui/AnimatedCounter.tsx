@@ -46,9 +46,11 @@ export default function AnimatedCounter({
     >
       <motion.div className={`text-3xl md:text-4xl font-bold mb-2 ${className || 'text-blue-600'}`}>
         <motion.span>{rounded}</motion.span>
-        {value.includes('+') && '+'}
         {value.includes('K') && 'K'}
+        {value.includes('B') && 'B'}
+        {value.includes('L') && 'L'}
         {value.includes('%') && '%'}
+        {value.includes('+') && '+'}
       </motion.div>
       <div className="text-gray-600 font-medium">
         {label}

@@ -15,20 +15,17 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 bg-gray-900/70 backdrop-blur-sm shadow-sm z-50 border-b border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-0.050">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="#home" className="flex items-center space-x-3">
+            <Link href="#home" className="flex items-center">
               <Image
                 src="/bg/logo/Pink and Black Elegant Personal Name Initials Logo.png"
                 alt="TS Media Logo"
-                width={40}
-                height={40}
-                className="w-10 h-10 object-contain"
+                width={100}
+                height={100}
+                className="w-24 h-24 object-contain"
               />
-              <span className="text-2xl font-bold text-white">
-                {businessInfo.name}
-              </span>
             </Link>
           </div>
 

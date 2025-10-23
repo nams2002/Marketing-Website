@@ -26,6 +26,7 @@ export default function About() {
               </p>
             </div>
 
+
             {/* Enhanced Strategy Triangle */}
             <div className="mt-8 p-8 bg-gradient-to-br from-blue-50 via-purple-50 to-green-50 rounded-2xl border border-gray-200 shadow-lg">
               <div className="text-center">
@@ -90,15 +91,15 @@ export default function About() {
                   <div className="text-sm text-gray-600 mb-2">Our Approach Delivers</div>
                   <div className="flex justify-center space-x-8 text-center">
                     <div>
-                      <div className="text-2xl font-bold text-blue-600">500%</div>
+                      <div className="text-2xl font-bold text-blue-600">1200%</div>
                       <div className="text-xs text-gray-500">ROI Increase</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-purple-600">2M+</div>
+                      <div className="text-2xl font-bold text-purple-600">10B+</div>
                       <div className="text-xs text-gray-500">Engagements</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-green-600">95%</div>
+                      <div className="text-2xl font-bold text-green-600">98%</div>
                       <div className="text-xs text-gray-500">Client Retention</div>
                     </div>
                   </div>
@@ -106,10 +107,6 @@ export default function About() {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <a href="#contact" className="px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow">Contact Us</a>
-              <a href="#services" className="px-6 py-3 rounded-xl bg-white text-gray-900 border border-gray-200 font-semibold shadow">Explore Features</a>
-            </div>
           </div>
 
           {/* Visual card with image and small overlay */}

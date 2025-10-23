@@ -167,42 +167,6 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Polished CTA banner */}
-        <div className="text-center mt-16">
-          <div className="relative overflow-hidden rounded-3xl border border-gray-200 bg-white/70 backdrop-blur-md p-10 shadow-lg">
-            <div className="pointer-events-none absolute -top-24 -left-24 w-80 h-80 rounded-full bg-blue-500/20 blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-purple-500/20 blur-3xl" />
-
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Get a 15‑min plan to grow with creators</h3>
-            <p className="text-gray-600 mb-5 max-w-2xl mx-auto">Trusted by {businessInfo.stats[1].value} brands • {businessInfo.stats[3].value} team • Rated 4.9/5</p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <button
-                onClick={() => setOpenCal(true)}
-                className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow hover:shadow-lg"
-              >
-                Book Free Strategy Call
-              </button>
-              <a href="#contact" className="px-6 py-3 rounded-xl bg-white text-gray-900 border border-gray-200 font-semibold shadow hover:shadow-md">See Pricing</a>
-              <a href="https://wa.me/15551234567" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-emerald-500 text-gray-900 font-semibold shadow hover:shadow-md">
-                <span>WhatsApp</span>
-              </a>
-            </div>
-            <div className="text-gray-500 text-sm mt-3">No sales pitch. 15 minutes. Free.</div>
-
-            {/* small logo strip */}
-            {/* <div className="mt-6 overflow-hidden">
-              <div className="flex items-center justify-center gap-8 whitespace-nowrap">
-                {businessInfo.pastClients.slice(0,8).map((c, i) => (
-                  <div key={i} className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
-                    <span className="text-xl">{c.logo}</span>
-                    <span className="text-sm">{c.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div> */}
-          </div>
-        </div>
 
         {/* Simple calendar modal */}
         {openCal && (

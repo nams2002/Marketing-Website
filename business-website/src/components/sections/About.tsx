@@ -1,93 +1,165 @@
+"use client";
 import { businessInfo } from '@/data/business-info';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function About() {
   return (
-    <section id="about" className="section-padding bg-gradient-modern">
-      <div className="container-max">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-            About {businessInfo.name}
-          </h2>
-          <p className="text-subtitle max-w-2xl mx-auto text-gray-300">
-            We are passionate about creating exceptional media experiences that drive business growth and connect brands with their audiences.
-          </p>
-        </div>
+    <section id="about" className="relative py-24 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-white to-gray-50" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
           {/* Content */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-6">
-              Transforming Ideas Into Impactful Media
-            </h3>
-            <div className="space-y-4 text-gray-300">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm mb-4 border border-blue-100">Why Choose Us</div>
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Blueprint</h3>
+            <div className="space-y-4 text-gray-600">
               <p>
-                With over 8 years of experience in the media industry, {businessInfo.name} has established itself as a trusted partner for businesses looking to elevate their brand presence and engage their target audience effectively.
+                We don&apos;t just create campaigns — we craft experiences powered by data, creativity, and strategy.
               </p>
               <p>
-                Our team of creative professionals combines strategic thinking with cutting-edge technology to deliver media solutions that not only look great but also drive measurable results for our clients.
+                Every idea we execute is backed by insights, innovation, and intent to deliver measurable results that truly matter.
               </p>
               <p>
-                From startups to Fortune 500 companies, we&apos;ve helped businesses across various industries tell their stories, build their brands, and achieve their marketing objectives through compelling media content.
+                Unlike traditional agencies, we don&apos;t guess — we analyze, design, and deliver.
               </p>
             </div>
 
-            {/* Key Features */}
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="flex items-center space-x-3">
-                <div className="flex-shrink-0 w-8 h-8 bg-indigo-500/20 rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
+            {/* Enhanced Strategy Triangle */}
+            <div className="mt-8 p-8 bg-gradient-to-br from-blue-50 via-purple-50 to-green-50 rounded-2xl border border-gray-200 shadow-lg">
+              <div className="text-center">
+                <div className="text-lg font-semibold text-gray-900 mb-6">Where Creativity Meets Data — and Ideas Turn into Impact.</div>
+                
+                {/* Enhanced Triangle Diagram */}
+                <div className="relative flex flex-col items-center justify-center space-y-6 mt-8">
+                  {/* Creativity - Top */}
+                  <div className="relative">
+                    <div className="flex flex-col items-center">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg mb-3">
+                        <span className="text-2xl text-white">💡</span>
+                      </div>
+                      <div className="text-xl font-bold text-blue-600 mb-2">CREATIVITY</div>
+                      <div className="text-sm text-gray-600 text-center max-w-32">Innovative ideas that captivate audiences</div>
+                    </div>
+                  </div>
+
+                  {/* Central Triangle */}
+                  <div className="relative">
+                    <div className="w-0 h-0 border-l-[20px] border-r-[20px] border-b-[35px] border-l-transparent border-r-transparent border-b-gray-400 mb-2"></div>
+                    <div className="text-xs text-gray-500 font-medium">IMPACT</div>
+                  </div>
+
+                  {/* Bottom Row - Strategy & Data */}
+                  <div className="flex items-center justify-center space-x-16">
+                    {/* Strategy - Left */}
+                    <div className="flex flex-col items-center">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center shadow-lg mb-3">
+                        <span className="text-2xl text-white">📊</span>
+                      </div>
+                      <div className="text-xl font-bold text-purple-600 mb-2">STRATEGY</div>
+                      <div className="text-sm text-gray-600 text-center max-w-32">Data-driven campaigns that deliver results</div>
+                    </div>
+
+                    {/* Connecting Lines */}
+                    <div className="flex items-center space-x-2">
+                      <div className="w-8 h-0.5 bg-gradient-to-r from-purple-400 to-gray-400"></div>
+                      <div className="w-2 h-2 rounded-full bg-gray-400"></div>
+                      <div className="w-8 h-0.5 bg-gradient-to-l from-green-400 to-gray-400"></div>
+                    </div>
+
+                    {/* Data - Right */}
+                    <div className="flex flex-col items-center">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center shadow-lg mb-3">
+                        <span className="text-2xl text-white">📈</span>
+                      </div>
+                      <div className="text-xl font-bold text-green-600 mb-2">DATA</div>
+                      <div className="text-sm text-gray-600 text-center max-w-32">Insights that optimize performance</div>
+                    </div>
+                  </div>
+
+                  {/* Bottom Connection Lines */}
+                  <div className="flex justify-center space-x-16 mt-4">
+                    <div className="w-0.5 h-8 bg-gradient-to-b from-purple-400 to-gray-300"></div>
+                    <div className="w-0.5 h-8 bg-gradient-to-b from-green-400 to-gray-300"></div>
+                  </div>
                 </div>
-                <span className="text-gray-200 font-medium">Creative Excellence</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="flex-shrink-0 w-8 h-8 bg-indigo-500/20 rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
+
+                {/* Results Banner */}
+                <div className="mt-8 p-4 bg-white/80 backdrop-blur-sm rounded-xl border border-gray-200">
+                  <div className="text-sm text-gray-600 mb-2">Our Approach Delivers</div>
+                  <div className="flex justify-center space-x-8 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-blue-600">1200%</div>
+                      <div className="text-xs text-gray-500">ROI Increase</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-purple-600">10B+</div>
+                      <div className="text-xs text-gray-500">Engagements</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-green-600">98%</div>
+                      <div className="text-xs text-gray-500">Client Retention</div>
+                    </div>
+                  </div>
                 </div>
-                <span className="text-gray-200 font-medium">Strategic Approach</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <div className="flex-shrink-0 w-8 h-8 bg-indigo-500/20 rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="text-gray-200 font-medium">Proven Results</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="flex-shrink-0 w-8 h-8 bg-indigo-500/20 rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="text-gray-200 font-medium">Client-Focused</span>
-              </div>
+            </div>
+
+          </div>
+
+          {/* Visual card with image and small overlay */}
+          <div className="relative lg:h-[460px] h-[340px] bg-gray-100 rounded-3xl">
+            <Image src="/bg/back1.jpg" alt="Team working" fill className="object-cover rounded-3xl" />
+            <div className="absolute inset-0 rounded-3xl ring-1 ring-gray-200" />
+            <div className="absolute -bottom-6 right-6 bg-white rounded-2xl shadow-lg p-4 w-64 border border-gray-100">
+              <div className="text-xs text-gray-500">Client Growth</div>
+              <div className="text-2xl font-bold text-gray-900">500+</div>
+              <div className="mt-2 text-sm text-emerald-600">+12.8%</div>
             </div>
           </div>
 
-          {/* Visual Element */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
-              <div className="text-center">
-                <h4 className="text-2xl font-bold mb-4">Our Mission</h4>
-                <p className="text-indigo-100 mb-6">
-                  To empower businesses with compelling media content that drives engagement, builds brand loyalty, and delivers measurable results.
-                </p>
-                <div className="grid grid-cols-2 gap-4 text-center">
-                  <div>
-                    <div className="text-3xl font-bold">{businessInfo.stats[0].value}</div>
-                    <div className="text-blue-200 text-sm">{businessInfo.stats[0].label}</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold">{businessInfo.stats[1].value}</div>
-                    <div className="text-blue-200 text-sm">{businessInfo.stats[1].label}</div>
-                  </div>
-                </div>
-              </div>
+          {/* Our Vision Section - positioned to align with DATA icon - RIGHT COLUMN - UPDATED */}
+          <div className="mt-20 w-full">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Vision</h3>
+            <div className="space-y-4 text-gray-600 w-full">
+              <p className="w-full">
+                Our vision is to become the global benchmark for influencer excellence — crafting campaigns that elevate brands, celebrate creativity, and connect with audiences on a human level.
+              </p>
+              <p className="w-full">
+                We strive to turn influence into impact, and ideas into unforgettable experiences that resonate across cultures and platforms worldwide.
+              </p>
+              <p className="w-full">
+                Through innovative strategies, data-driven insights, and authentic storytelling, we're building a future where every brand has the power to create meaningful connections with their audience.
+              </p>
+              <p className="w-full">
+                We envision a world where creativity meets technology, where every campaign tells a story worth remembering, and where brands don't just reach audiences — they inspire them.
+              </p>
             </div>
+          </div>
+
+        </div>
+
+        {/* Clients carousel */}
+        <div className="relative mt-20">
+          <div className="text-center text-gray-500 mb-6 font-bold">Building Trust With Global Clients</div>
+          <div className="overflow-hidden py-2">
+            <motion.div className="flex gap-12 items-center whitespace-nowrap" animate={{ x: ['0%', '-50%'] }} transition={{ duration: 22, repeat: Infinity, ease: 'linear' }}>
+              {[...businessInfo.pastClients, ...businessInfo.pastClients].map((c, i) => (
+                <div key={i} className="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-colors">
+                  <div className="relative w-8 h-8 flex-shrink-0">
+                    <Image 
+                      src={c.logo} 
+                      alt={`${c.name} logo`}
+                      fill
+                      className="object-contain"
+                      sizes="32px"
+                    />
+                  </div>
+                  <span className="text-sm font-medium whitespace-nowrap">{c.name}</span>
+                </div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </div>

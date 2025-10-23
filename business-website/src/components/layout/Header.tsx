@@ -23,17 +23,14 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Modern Logo */}
           <div className="flex items-center">
-            <Link href="#home" className="flex items-center space-x-3">
+            <Link href="#home" className="flex items-center">
               <Image
                 src="/bg/logo/Pink and Black Elegant Personal Name Initials Logo.png"
                 alt="TS Media Logo"
-                width={40}
-                height={40}
-                className="w-10 h-10 object-contain"
+                width={80}
+                height={80}
+                className="w-20 h-20 object-contain"
               />
-              <span className="text-2xl font-bold text-gradient tracking-tight">
-                {businessInfo.name}
-              </span>
             </Link>
           </div>
 

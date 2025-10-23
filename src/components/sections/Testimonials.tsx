@@ -27,15 +27,10 @@ export default function Testimonials() {
             {businessInfo.testimonials.map((t) => (
               <motion.div key={t.id} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="snap-start shrink-0 w-[92%] sm:w-[540px] bg-gray-900/95 border border-gray-700 rounded-2xl p-7 shadow-lg relative overflow-hidden">
                 <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-500 bg-[conic-gradient(from_0deg,theme(colors.blue.500),theme(colors.purple.500),theme(colors.blue.500))]" />
-                {/* Header with avatar and company */}
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-gray-700">
-                    <Image src="/images/influencers/professional_potrait.jpg" alt={t.name} fill className="object-cover" />
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold leading-tight">{t.name}</div>
-                    <div className="text-xs text-gray-400 leading-tight">{t.position} · {t.company}</div>
-                  </div>
+                {/* Header with name and company */}
+                <div className="mb-4">
+                  <div className="text-white font-semibold text-lg leading-tight">{t.name}</div>
+                  <div className="text-sm text-gray-400 leading-tight">{t.position} · {t.company}</div>
                 </div>
                 {/* Body */}
                 <p className="text-gray-300/90 mb-5 text-[17px] leading-7">“{t.content}”</p>
@@ -54,7 +49,6 @@ export default function Testimonials() {
 
         {/* CTA below */}
         <div className="text-center mt-10">
-          <a href="#portfolio" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-gray-900 font-semibold shadow hover:shadow-md">Read more client stories</a>
         </div>
 
 

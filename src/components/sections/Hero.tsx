@@ -26,7 +26,7 @@ export default function Hero() {
           <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
             <motion.div className="flex items-center gap-3 text-sm text-gray-700 mb-6" variants={fadeInUp}>
               <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center">●</div>
-              <span>500+ Projects Delivered</span>
+              <span>1000+ Campaigns Delivered</span>
               <span className="text-gray-400">/</span>
               <Link href="#testimonials" className="underline underline-offset-4">Client Success Stories</Link>
             </motion.div>
@@ -80,8 +80,8 @@ export default function Hero() {
 
             <motion.div className="absolute right-4 -top-6 w-56 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-3xl p-5 shadow-lg" initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.7 }}>
               <div className="text-xs uppercase text-gray-400">Campaign reach</div>
-              <div className="text-4xl font-bold text-gray-900">2M+</div>
-              <div className="text-sm text-gray-600">Followers engaged</div>
+              <div className="text-4xl font-bold text-gray-900">10B+</div>
+              <div className="text-sm text-gray-600">Global reach achieved</div>
             </motion.div>
 
             <motion.div className="absolute right-4 bottom-4 w-72 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-3xl p-4 shadow-lg flex gap-4 items-center" initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.85 }}>
@@ -90,7 +90,7 @@ export default function Hero() {
               </div>
               <div className="flex-1">
                 <div className="text-gray-900 font-semibold">Latest Campaign</div>
-                <div className="text-gray-900 font-bold text-xl">500% ROI</div>
+                <div className="text-gray-900 font-bold text-xl">1200% ROI</div>
                 <div className="flex items-center gap-1 text-sm text-gray-700"><span>★</span><span>4.9</span></div>
               </div>
             </motion.div>

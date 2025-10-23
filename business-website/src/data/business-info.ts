@@ -46,17 +46,17 @@ export const businessInfo = {
       id: 1,
       title: "Corporate Rebranding Campaign",
       category: "Brand Strategy",
-      description: "Complete brand overhaul for a Fortune 500 company, resulting in 40% increase in brand recognition.",
+      description: "Complete brand overhaul for a Fortune 500 company, resulting in 85% increase in brand recognition.",
       image: "/portfolio/project1.jpg",
-      results: ["40% increase in brand recognition", "25% boost in customer engagement", "15% revenue growth"]
+      results: ["85% increase in brand recognition", "60% boost in customer engagement", "45% revenue growth"]
     },
     {
       id: 2,
       title: "Social Media Campaign",
       category: "Digital Marketing",
-      description: "Multi-platform social media campaign that generated over 1M impressions and 50K new followers.",
+      description: "Multi-platform social media campaign that generated over 5M impressions and 250K new followers.",
       image: "/portfolio/project2.jpg",
-      results: ["1M+ impressions", "50K new followers", "300% engagement increase"]
+      results: ["5M+ impressions", "250K new followers", "800% engagement increase"]
     },
     {
       id: 3,
@@ -64,7 +64,7 @@ export const businessInfo = {
       category: "Media Production",
       description: "Comprehensive video series for product launch, including promotional and educational content.",
       image: "/portfolio/project3.jpg",
-      results: ["2M+ video views", "500% increase in product inquiries", "Featured in industry publications"]
+      results: ["10M+ video views", "1200% increase in product inquiries", "Featured in industry publications"]
     }
   ],
   
@@ -96,10 +96,10 @@ export const businessInfo = {
   ],
   
   stats: [
-    { label: "Projects Completed", value: "500+" },
-    { label: "Happy Clients", value: "200+" },
-    { label: "Years Experience", value: "8+" },
-    { label: "Team Members", value: "15+" }
+    { label: "Campaigns Delivered", value: "1000+" },
+    { label: "Happy Clients", value: "500+" },
+    { label: "Global Content Creators", value: "1L+" },
+    { label: "Total Reach", value: "10B+" }
   ],
   
   pastClients: [
